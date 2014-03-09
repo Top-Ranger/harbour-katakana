@@ -133,7 +133,8 @@ OTHER_FILES += qml/harbour-katakana.qml \
     qml/pages/Katakana/bi.png \
     qml/pages/Katakana/be.png \
     qml/pages/Katakana/ba.png \
-    qml/pages/Katakana/a.png
+    qml/pages/Katakana/a.png \
+    LICENSE.txt
 
 HEADERS += \
     src/listelement.h \
