@@ -317,7 +317,12 @@ Page {
             }
 
             if (ji.checked) {
-                testclass.add("ji/zi", "Katakana/ji.png")
+                if(modus === 2) { // In free mode we only want to type in the transcription
+                    testclass.add("ji", "Katakana/ji.png")
+                }
+                else {
+                    testclass.add("ji/zi", "Katakana/ji.png")
+                }
             }
 
             if (zu.checked) {
@@ -340,11 +345,21 @@ Page {
             }
 
             if (di.checked) {
-                testclass.add("ji/di", "Katakana/di.png")
+                if(modus === 2) { // In free mode we only want to type in the transcription
+                    testclass.add("ji", "Katakana/di.png")
+                }
+                else {
+                    testclass.add("ji/di", "Katakana/di.png")
+                }
             }
 
             if (du.checked) {
-                testclass.add("zu/du", "Katakana/du.png")
+                if(modus === 2) {
+                    testclass.add("zu", "Katakana/du.png")
+                }
+                else {
+                    testclass.add("zu/du", "Katakana/du.png")
+                }
             }
 
             if (de.checked) {
@@ -542,15 +557,30 @@ Page {
             // The "ja" line
 
             if (dya.checked) {
-                testclass.add("ja(d)", "Katakana/dya.png")
+                if(modus === 2) { // In free mode we only want to type in the transcription
+                    testclass.add("ja", "Katakana/dya.png")
+                }
+                else {
+                    testclass.add("ja(d)", "Katakana/dya.png")
+                }
             }
 
             if (dyu.checked) {
-                testclass.add("ju(d)", "Katakana/dyu.png")
+                if(modus === 2) {
+                    testclass.add("ju", "Katakana/dyu.png")
+                }
+                else {
+                    testclass.add("ju(d)", "Katakana/dyu.png")
+                }
             }
 
             if (dyo.checked) {
-                testclass.add("jo(d)", "Katakana/dyo.png")
+                if(modus === 2) {
+                    testclass.add("jo", "Katakana/dyo.png")
+                }
+                else {
+                    testclass.add("jo(d)", "Katakana/dyo.png")
+                }
             }
 
 
