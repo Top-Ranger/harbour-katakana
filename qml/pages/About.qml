@@ -36,6 +36,8 @@ Page {
 
     SilicaFlickable {
 
+        VerticalScrollDecorator {}
+
         PullDownMenu {
             visible: false
         }
