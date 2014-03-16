@@ -60,7 +60,7 @@ Page {
             }
 
             Label {
-                text: "Katakana Version 1.1"
+                text: "Katakana Version 1.2"
             }
 
             Text  {
