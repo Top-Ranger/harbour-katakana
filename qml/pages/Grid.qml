@@ -602,15 +602,15 @@ Page {
             // The "pya" line
 
             if (pya.checked) {
-                testclass.add("pya", "Katakana/gya.png")
+                testclass.add("pya", "Katakana/pya.png")
             }
 
             if (pyu.checked) {
-                testclass.add("pyu", "Katakana/gyu.png")
+                testclass.add("pyu", "Katakana/pyu.png")
             }
 
             if (pyo.checked) {
-                testclass.add("pyo", "Katakana/gyo.png")
+                testclass.add("pyo", "Katakana/pyo.png")
             }
 
 
