@@ -30,7 +30,6 @@
 
 #include <QtQuick>
 #include <sailfishapp.h>
-#include <QtQml>
 #include "testclass.h"
 
 int main(int argc, char *argv[])
