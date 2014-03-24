@@ -3,8 +3,8 @@ Summary: Katakana Trainer
 Version: 1.4
 Release: 1
 Group: Qt/Qt
-URL: http://example.org/
-License: BSD
+URL: https://github.com/Top-Ranger/harbour-katakana
+License: modified BSD
 Sources:
 - '%{name}-%{version}.tar.bz2'
 Description: |-
@@ -12,20 +12,20 @@ Description: |-
 Configure: none
 Builder: qtc5
 PkgConfigBR:
-- sailfishapp >= 0.0.10
-- Qt5Core
-- Qt5Qml
 - Qt5Quick
+- Qt5Qml
+- Qt5Core
+- sailfishapp >= 0.0.10
 Requires:
 - sailfishsilica-qt5 >= 0.10.9
 Files:
-- /usr/share/harbour-katakana
-- /usr/share/icons/hicolor/86x86/apps
-- /usr/share/applications
-- /usr/share/harbour-katakana
-- /usr/bin
-- '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
-- '%{_datadir}/applications/%{name}.desktop'
-- '%{_datadir}/%{name}/qml'
 - '%{_bindir}'
+- '%{_datadir}/%{name}/qml'
+- '%{_datadir}/applications/%{name}.desktop'
+- '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
+- /usr/bin
+- /usr/share/harbour-katakana
+- /usr/share/applications
+- /usr/share/icons/hicolor/86x86/apps
+- /usr/share/harbour-katakana
 PkgBR: []
