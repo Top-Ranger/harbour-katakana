@@ -37,23 +37,23 @@ signals:
 public slots:
 
 private:
-    static QList<ListElement> elementlist;
-    static QString _picture;
-    static QString _one;
-    static QString _two;
-    static QString _three;
-    static QString _four;
-    static QString _five;
-    static QString _six;
-    static QString _one_picture;
-    static QString _two_picture;
-    static QString _three_picture;
-    static QString _four_picture;
-    static QString _five_picture;
-    static QString _six_picture;
-    static int _correct;
-    static int _question;
-    static QString _valuecorrect;
+    QList<ListElement> elementlist;
+    QString _picture;
+    QString _one;
+    QString _two;
+    QString _three;
+    QString _four;
+    QString _five;
+    QString _six;
+    QString _one_picture;
+    QString _two_picture;
+    QString _three_picture;
+    QString _four_picture;
+    QString _five_picture;
+    QString _six_picture;
+    int _correct;
+    int _question;
+    QString _valuecorrect;
 
 };
 

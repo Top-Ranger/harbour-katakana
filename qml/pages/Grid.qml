@@ -46,10 +46,6 @@ Page {
           */
         property int modus: 0
 
-        Testclass {
-            id: testclass
-        }
-
         function startNormalTest() {
             modus = 0
             initialiseTest()

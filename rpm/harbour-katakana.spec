@@ -13,7 +13,7 @@ Name:       harbour-katakana
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Katakana Trainer
-Version:    1.2
+Version:    1.4
 Release:    1
 Group:      Qt/Qt
 License:    BSD

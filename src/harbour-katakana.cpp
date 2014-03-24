@@ -49,6 +49,17 @@ int main(int argc, char *argv[])
     //
     // To display the view, call "show()" (will show fullscreen on device).
 
-    return SailfishApp::main(argc, argv);
+    QGuiApplication *app = SailfishApp::application(argc,argv);
+
+    Testclass testclass;
+
+    QQuickView *view = SailfishApp::createView();
+
+    view->rootContext()->setContextProperty("testclass", &testclass);
+
+    view->setSource(SailfishApp::pathTo("qml/harbour-katakana.qml"));
+    view->show();
+
+    return app->exec();
 }
 

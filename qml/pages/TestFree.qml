@@ -36,10 +36,6 @@ import harbour.katakana.Testclass 1.0
 Page {
     id: test
 
-    Testclass {
-        id: testclass
-    }
-
     Item {
         id: variable
         property int questions: 0
