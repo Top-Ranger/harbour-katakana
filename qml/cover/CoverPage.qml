@@ -34,6 +34,9 @@ import Sailfish.Silica 1.0
 CoverBackground {
     Image {
         id: coverImage
+        height: parent.height
+        width: parent.width
+        fillMode: Image.PreserveAspectFit
         source: "cover.png"
     }
     Label {
@@ -42,5 +45,3 @@ CoverBackground {
         text: "Katakana"
     }
 }
-
-
