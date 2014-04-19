@@ -16,8 +16,8 @@ Summary:    Katakana Trainer
 Version:    1.4
 Release:    1
 Group:      Qt/Qt
-License:    BSD
-URL:        http://example.org/
+License:    modified BSD
+URL:        https://github.com/Top-Ranger/harbour-katakana
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-katakana.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9

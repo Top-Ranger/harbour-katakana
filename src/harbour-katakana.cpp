@@ -34,8 +34,6 @@
 
 int main(int argc, char *argv[])
 {
-    qmlRegisterType<Testclass>("harbour.katakana.Testclass", 1, 0, "Testclass");
-
     // SailfishApp::main() will display "qml/template.qml", if you need more
     // control over initialization, you can use:
     //
