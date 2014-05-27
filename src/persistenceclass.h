@@ -27,25 +27,28 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "listelement.h"
+#ifndef PERSISTENCECLASS_H
+#define PERSISTENCECLASS_H
 
-ListElement::ListElement(QObject *parent) :
-    QObject(parent)
+#include <QObject>
+#include <QHash>
+
+class PersistenceClass : public QObject
 {
-}
+    Q_OBJECT
+public:
+    explicit PersistenceClass(QObject *parent = 0);
+    ~PersistenceClass();
 
-ListElement::ListElement(const ListElement& e) :
-    QObject()
-{
-    Name = e.Name;
-    ImagePath = e.ImagePath;
-    Question = e.Question;
+signals:
 
-}
+public slots:
+    void saveNow();
+    bool getBool(QString s);
+    void saveBool(QString s, bool b);
 
-void ListElement::operator=(const ListElement& other)
-{
-    Name = other.Name;
-    ImagePath = other.ImagePath;
-    Question = other.Question;
-}
+private:
+    QHash<QString,bool> _hash;
+};
+
+#endif // PERSISTENCECLASS_H

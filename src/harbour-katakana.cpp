@@ -31,6 +31,7 @@
 #include <QtQuick>
 #include <sailfishapp.h>
 #include "testclass.h"
+#include "persistenceclass.h"
 
 int main(int argc, char *argv[])
 {
@@ -46,10 +47,12 @@ int main(int argc, char *argv[])
     QGuiApplication *app = SailfishApp::application(argc,argv);
 
     Testclass testclass;
+    PersistenceClass save;
 
     QQuickView *view = SailfishApp::createView();
 
     view->rootContext()->setContextProperty("testclass", &testclass);
+    view->rootContext()->setContextProperty("save", &save);
 
     view->setSource(SailfishApp::pathTo("qml/harbour-katakana.qml"));
     view->show();

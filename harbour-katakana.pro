@@ -12,7 +12,8 @@ CONFIG += sailfishapp
 
 SOURCES += src/harbour-katakana.cpp \
     src/listelement.cpp \
-    src/testclass.cpp
+    src/testclass.cpp \
+    src/persistenceclass.cpp
 
 OTHER_FILES += qml/harbour-katakana.qml \
     qml/cover/CoverPage.qml \
@@ -140,5 +141,6 @@ OTHER_FILES += qml/harbour-katakana.qml \
 
 HEADERS += \
     src/listelement.h \
-    src/testclass.h
+    src/testclass.h \
+    src/persistenceclass.h
 
