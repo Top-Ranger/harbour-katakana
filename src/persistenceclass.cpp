@@ -38,7 +38,8 @@
 
 PersistenceClass::PersistenceClass(QObject *parent) :
     QObject(parent),
-    _hash()
+    _hash(),
+    _hasChanged(false)
 {
     QString path = QString(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
     path.append("/harbour-katakana/harbour-katakana.xml");
@@ -115,48 +116,52 @@ PersistenceClass::~PersistenceClass()
 
 void PersistenceClass::saveNow()
 {
-    QString path = QString(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
-    path.append("/harbour-katakana/");
-
-    QDir dir(path);
-    if(!dir.exists())
+    if(_hasChanged)
     {
-        qWarning() << "DEBUG in " __FILE__ << " " << __LINE__ << ": Creating directory" << path;
-        dir.mkdir(path);
-    }
+        QString path = QString(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
+        path.append("/harbour-katakana/");
 
-    path.append("/harbour-katakana.xml");
-    QFile file(path);
-
-    if(file.open(QIODevice::WriteOnly))
-    {
-
-        QXmlStreamWriter writer(&file);
-        writer.setAutoFormatting(true);
-        writer.writeStartDocument();
-        writer.writeStartElement("optionList");
-
-        for(QHash<QString,bool>::const_iterator i = _hash.begin(); i != _hash.end(); ++i)
+        QDir dir(path);
+        if(!dir.exists())
         {
-            writer.writeStartElement("bool");
-            writer.writeAttribute("key",i.key());
-            writer.writeAttribute("value", i.value() ?"true":"false");
+            qWarning() << "DEBUG in " __FILE__ << " " << __LINE__ << ": Creating directory" << path;
+            dir.mkdir(path);
+        }
+
+        path.append("/harbour-katakana.xml");
+        QFile file(path);
+
+        if(file.open(QIODevice::WriteOnly))
+        {
+
+            QXmlStreamWriter writer(&file);
+            writer.setAutoFormatting(true);
+            writer.writeStartDocument();
+            writer.writeStartElement("optionList");
+
+            for(QHash<QString,bool>::const_iterator i = _hash.begin(); i != _hash.end(); ++i)
+            {
+                writer.writeStartElement("bool");
+                writer.writeAttribute("key",i.key());
+                writer.writeAttribute("value", i.value() ?"true":"false");
+                writer.writeEndElement();
+            }
+
             writer.writeEndElement();
+            writer.writeEndDocument();
+
+            if(writer.hasError())
+            {
+                qWarning() << "WARNING in " __FILE__ << " " << __LINE__ << ": Writing - Error while writing file";
+            }
+
+            file.close();
         }
-
-        writer.writeEndElement();
-        writer.writeEndDocument();
-
-        if(writer.hasError())
+        else
         {
-            qWarning() << "WARNING in " __FILE__ << " " << __LINE__ << ": Writing - Error while writing file";
+            qWarning() << "WARNING in " __FILE__ << " " << __LINE__ << ": Writing - Can not write file \"" + path + "\":" + file.errorString();
         }
-
-        file.close();
-    }
-    else
-    {
-        qWarning() << "WARNING in " __FILE__ << " " << __LINE__ << ": Writing - Can not write file \"" + path + "\":" + file.errorString();
+        _hasChanged = false;
     }
 }
 
@@ -168,4 +173,5 @@ bool PersistenceClass::getBool(QString s)
 void PersistenceClass::saveBool(QString s, bool b)
 {
     _hash[s] = b;
+    _hasChanged = true;
 }

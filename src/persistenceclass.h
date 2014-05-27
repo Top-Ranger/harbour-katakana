@@ -49,6 +49,7 @@ public slots:
 
 private:
     QHash<QString,bool> _hash;
+    bool _hasChanged;
 };
 
 #endif // PERSISTENCECLASS_H
