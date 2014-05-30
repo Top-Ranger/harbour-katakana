@@ -59,8 +59,6 @@ Page {
             if(!variable.started)
             {
                 variable.started = true
-                variable.questions++
-                variable.sumQuestions++
                 testclass.newQuestion()
                 variable.picture = testclass.picture()
                 variable.rightanswer = testclass.correct()
@@ -100,6 +98,8 @@ Page {
         }
 
         function end(i){
+            variable.questions++
+            variable.sumQuestions++
             if(i === variable.rightanswer)
             {
                 variable.correct++

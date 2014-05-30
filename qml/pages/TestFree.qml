@@ -53,8 +53,6 @@ Page {
             if(!variable.started)
             {
                 variable.started = true
-                variable.questions++
-                variable.sumQuestions++
                 testclass.newQuestion()
                 variable.picture = testclass.picture()
                 variable.valuecorrect = testclass.valuecorrect()
@@ -66,6 +64,8 @@ Page {
 
 
         function end(){
+            variable.questions++
+            variable.sumQuestions++
             if(testclass.sameString(variable.valuecorrect, input.text))
             {
                 variable.correct++

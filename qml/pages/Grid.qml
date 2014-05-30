@@ -45,18 +45,8 @@ Page {
           */
         property int modus: 0
 
-        function startNormalTest() {
-            modus = 0
-            initialiseTest()
-        }
-
-        function startReverseTest() {
-            modus = 1
-            initialiseTest()
-        }
-
-        function startFreeTest() {
-            modus = 2
+        function starTest() {
+            modus = selectModus.currentIndex
             initialiseTest()
         }
 
@@ -646,18 +636,8 @@ Page {
             }
 
             MenuItem {
-                text: "Start Free Test"
-                onClicked: startTest.startFreeTest()
-            }
-
-            MenuItem {
-                text: "Start Reverse Test"
-                onClicked: startTest.startReverseTest()
-            }
-
-            MenuItem {
                 text: "Start Test"
-                onClicked: startTest.startNormalTest()
+                onClicked: startTest.startTest()
             }
 
         }
@@ -687,6 +667,21 @@ Page {
                 text: "You need at least six Katakana selected"
                 color: Theme.highlightColor
                 visible: startTest.showerror
+            }
+
+            ComboBox {
+                id: selectModus
+                width: parent.width
+                label: "Test mode:"
+                currentIndex: save.getInt("Modus")
+
+                onCurrentIndexChanged: save.saveInt("Modus",currentIndex)
+
+                menu: ContextMenu {
+                    MenuItem { text: "Normal Test" }
+                    MenuItem { text: "Reverse Test" }
+                    MenuItem { text: "Free Test"}
+                }
             }
 
             TextSwitch {
