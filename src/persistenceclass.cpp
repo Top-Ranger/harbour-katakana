@@ -43,7 +43,7 @@ PersistenceClass::PersistenceClass(QObject *parent) :
     _hasChanged(false)
 {
     QString path = QString(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
-    path.append("/harbour-hiragana/harbour-hiragana.xml");
+    path.append("/harbour-katakana/harbour-katakana.xml");
 
     QFile file(path);
 
@@ -133,12 +133,19 @@ PersistenceClass::~PersistenceClass()
     saveNow();
 }
 
+void PersistenceClass::clear()
+{
+    _hash.clear();
+    _intHash.clear();
+    _hasChanged = true;
+}
+
 void PersistenceClass::saveNow()
 {
     if(_hasChanged)
     {
         QString path = QString(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation));
-        path.append("/harbour-hiragana/");
+        path.append("/harbour-katakana/");
 
         QDir dir(path);
         if(!dir.exists())
@@ -147,7 +154,7 @@ void PersistenceClass::saveNow()
             dir.mkdir(path);
         }
 
-        path.append("/harbour-hiragana.xml");
+        path.append("/harbour-katakana.xml");
         QFile file(path);
 
         if(file.open(QIODevice::WriteOnly))

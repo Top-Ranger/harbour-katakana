@@ -636,6 +636,12 @@ Page {
             }
 
             MenuItem {
+                text: "Delete save"
+                onClicked: remorsePopup.execute("Delete save", function() {save.clear(); save.saveNow(); pageStack.replace(Qt.resolvedUrl("Grid.qml")) } )
+            }
+
+
+            MenuItem {
                 text: "Start Test"
                 onClicked: startTest.startTest()
             }
@@ -654,6 +660,10 @@ Page {
                 left: parent.left
                 right: parent.right
                 margins: Theme.paddingLarge
+            }
+
+            RemorsePopup {
+                id: remorsePopup
             }
 
             PageHeader {

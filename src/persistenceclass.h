@@ -44,6 +44,7 @@ signals:
 
 public slots:
     Q_INVOKABLE void saveNow();
+    Q_INVOKABLE void clear();
     Q_INVOKABLE bool getBool(QString s);
     Q_INVOKABLE void saveBool(QString s, bool b);
     Q_INVOKABLE int getInt(QString s);
