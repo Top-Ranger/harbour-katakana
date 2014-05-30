@@ -43,12 +43,15 @@ public:
 signals:
 
 public slots:
-    void saveNow();
-    bool getBool(QString s);
-    void saveBool(QString s, bool b);
+    Q_INVOKABLE void saveNow();
+    Q_INVOKABLE bool getBool(QString s);
+    Q_INVOKABLE void saveBool(QString s, bool b);
+    Q_INVOKABLE int getInt(QString s);
+    Q_INVOKABLE void saveInt(QString s, int i);
 
 private:
     QHash<QString,bool> _hash;
+    QHash<QString,int> _intHash;
     bool _hasChanged;
 };
 
