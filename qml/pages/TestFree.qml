@@ -111,7 +111,7 @@ Page {
                 }
 
                 Label{
-                    text: "Ratio: " + (variable.questions === 0?0:(100.0/variable.questions*variable.correct)) + "%"
+                    text: "Ratio: " + (variable.questions === 0?0:(Math.round(100.0/variable.questions*variable.correct))) + "%"
                 }
             }
 
@@ -127,7 +127,7 @@ Page {
                 }
 
                 Label{
-                    text: "Overall Ratio: " + (variable.sumQuestions === 0?0:(100.0/variable.sumQuestions*variable.sumCorrect)) + "%"
+                    text: "Overall Ratio: " + (variable.sumQuestions === 0?0:(Math.round(100.0/variable.sumQuestions*variable.sumCorrect))) + "%"
                     font.pixelSize: Theme.fontSizeTiny
                 }
             }
