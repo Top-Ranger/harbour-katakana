@@ -45,7 +45,7 @@ Page {
           */
         property int modus: 0
 
-        function starTest() {
+        function startTest() {
             modus = selectModus.currentIndex
             initialiseTest()
         }

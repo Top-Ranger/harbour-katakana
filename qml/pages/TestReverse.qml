@@ -40,13 +40,13 @@ Page {
         property int correct: 0
         property int rightanswer: 0
         property bool started: false
-        property string picture: "Hiragana/empty.png"
-        property string valueone: "Hiragana/empty.png"
-        property string valuetwo: "Hiragana/empty.png"
-        property string valuethree: "Hiragana/empty.png"
-        property string valuefour: "Hiragana/empty.png"
-        property string valuefive: "Hiragana/empty.png"
-        property string valuesix: "Hiragana/empty.png"
+        property string picture: "Katakana/empty.png"
+        property string valueone: "Katakana/empty.png"
+        property string valuetwo: "Katakana/empty.png"
+        property string valuethree: "Katakana/empty.png"
+        property string valuefour: "Katakana/empty.png"
+        property string valuefive: "Katakana/empty.png"
+        property string valuesix: "Katakana/empty.png"
         property string valuecorrect: ""
         property int sumCorrect: save.getInt("ReverseTestCorrect")
         property int sumQuestions: save.getInt("ReverseTestQuestions")
@@ -179,7 +179,7 @@ Page {
                 }
                 Image {
                     id: target
-                    source: variable.started?"Hiragana/empty.png":variable.picture
+                    source: variable.started?"Katakana/empty.png":variable.picture
                 }
             }
 

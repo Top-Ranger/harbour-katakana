@@ -40,7 +40,7 @@ Page {
         property int correct: 0
         property int rightanswer: 0
         property bool started: false
-        property string picture: "Hiragana/empty.png"
+        property string picture: "Katakana/empty.png"
         property string valuecorrect: ""
         property int sumCorrect: save.getInt("FreeTestCorrect")
         property int sumQuestions: save.getInt("FreeTestQuestions")
