@@ -137,11 +137,11 @@ Page {
 
             Row {
                 Label {
-                    text: "Questions: " + variable.questions + "    "
+                    text: "Questions: " + variable.questions + "   "
                 }
 
                 Label {
-                    text: "Correct: " + variable.correct + "    "
+                    text: "Correct: " + variable.correct + "   "
                 }
 
                 Label{
@@ -151,12 +151,12 @@ Page {
 
             Row {
                 Label {
-                    text: "Overall Questions: " + variable.sumQuestions + "    "
+                    text: "Overall Questions: " + variable.sumQuestions + "   "
                     font.pixelSize: Theme.fontSizeTiny
                 }
 
                 Label {
-                    text: "Overall Correct: " + variable.sumCorrect + "    "
+                    text: "Overall Correct: " + variable.sumCorrect + "   "
                     font.pixelSize: Theme.fontSizeTiny
                 }
 

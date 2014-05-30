@@ -667,7 +667,7 @@ Page {
             }
 
             PageHeader {
-                title: ""
+                title: "Katakana"
             }
 
             VerticalScrollDecorator {}
@@ -680,8 +680,9 @@ Page {
             }
 
             ComboBox {
+                x: 0 - parent.x
                 id: selectModus
-                width: parent.width
+                width: grid.width
                 label: "Test mode:"
                 currentIndex: save.getInt("Modus")
 
