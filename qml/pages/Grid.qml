@@ -371,7 +371,7 @@ Page {
             save.saveBool("dyo",modus)
 
             bya.checked = modus
-            save.saveBool("",modus)
+            save.saveBool("bya",modus)
 
             byu.checked = modus
             save.saveBool("byu",modus)
