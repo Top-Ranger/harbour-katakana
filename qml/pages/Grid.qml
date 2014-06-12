@@ -50,6 +50,345 @@ Page {
             initialiseTest()
         }
 
+        function setMonographs(modus) {
+
+            a.checked = modus
+            save.saveBool("a",modus)
+
+            i.checked = modus
+            save.saveBool("i",modus)
+
+            u.checked = modus
+            save.saveBool("u",modus)
+
+            e.checked = modus
+            save.saveBool("e",modus)
+
+            o.checked = modus
+            save.saveBool("o",modus)
+
+            ka.checked = modus
+            save.saveBool("ka",modus)
+
+            ki.checked = modus
+            save.saveBool("ki",modus)
+
+            ku.checked = modus
+            save.saveBool("ku",modus)
+
+            ke.checked = modus
+            save.saveBool("ke",modus)
+
+            ko.checked = modus
+            save.saveBool("ko",modus)
+
+            sa.checked = modus
+            save.saveBool("sa",modus)
+
+            shi.checked = modus
+            save.saveBool("shi",modus)
+
+            su.checked = modus
+            save.saveBool("su",modus)
+
+            se.checked = modus
+            save.saveBool("se",modus)
+
+            so.checked = modus
+            save.saveBool("so",modus)
+
+            ta.checked = modus
+            save.saveBool("ta",modus)
+
+            chi.checked = modus
+            save.saveBool("chi",modus)
+
+            tsu.checked = modus
+            save.saveBool("tsu",modus)
+
+            te.checked = modus
+            save.saveBool("te",modus)
+
+            to.checked = modus
+            save.saveBool("to",modus)
+
+            na.checked = modus
+            save.saveBool("na",modus)
+
+            ni.checked = modus
+            save.saveBool("ni",modus)
+
+            nu.checked = modus
+            save.saveBool("nu",modus)
+
+            ne.checked = modus
+            save.saveBool("ne",modus)
+
+            no.checked = modus
+            save.saveBool("no",modus)
+
+            ha.checked = modus
+            save.saveBool("ha",modus)
+
+            hi.checked = modus
+            save.saveBool("hi",modus)
+
+            fu.checked = modus
+            save.saveBool("fu",modus)
+
+            he.checked = modus
+            save.saveBool("he",modus)
+
+            ho.checked = modus
+            save.saveBool("ho",modus)
+
+            ma.checked = modus
+            save.saveBool("ma",modus)
+
+            mi.checked = modus
+            save.saveBool("mi",modus)
+
+            mu.checked = modus
+            save.saveBool("mu",modus)
+
+            me.checked = modus
+            save.saveBool("me",modus)
+
+            mo.checked = modus
+            save.saveBool("mo",modus)
+
+            ya.checked = modus
+            save.saveBool("ya",modus)
+
+            yu.checked = modus
+            save.saveBool("yu",modus)
+
+            yo.checked = modus
+            save.saveBool("yo",modus)
+
+            ra.checked = modus
+            save.saveBool("ra",modus)
+
+            ri.checked = modus
+            save.saveBool("ri",modus)
+
+            ru.checked = modus
+            save.saveBool("ru",modus)
+
+            re.checked = modus
+            save.saveBool("re",modus)
+
+            ro.checked = modus
+            save.saveBool("ro",modus)
+
+            wa.checked = modus
+            save.saveBool("wa",modus)
+
+            wi.checked = modus
+            save.saveBool("wi",modus)
+
+            we.checked = modus
+            save.saveBool("we",modus)
+
+            wo.checked = modus
+            save.saveBool("wo",modus)
+
+            n.checked = modus
+            save.saveBool("n",modus)
+        }
+
+        function setDiacritics(modus) {
+
+            ga.checked = modus
+            save.saveBool("ga",modus)
+
+            gi.checked = modus
+            save.saveBool("gi",modus)
+
+            gu.checked = modus
+            save.saveBool("gu",modus)
+
+            ge.checked = modus
+            save.saveBool("ge",modus)
+
+            go.checked = modus
+            save.saveBool("go",modus)
+
+            za.checked = modus
+            save.saveBool("za",modus)
+
+            ji.checked = modus
+            save.saveBool("ji",modus)
+
+            zu.checked = modus
+            save.saveBool("zu",modus)
+
+            ze.checked = modus
+            save.saveBool("ze",modus)
+
+            zo.checked = modus
+            save.saveBool("zo",modus)
+
+            da.checked = modus
+            save.saveBool("da",modus)
+
+            di.checked = modus
+            save.saveBool("di",modus)
+
+            du.checked = modus
+            save.saveBool("du",modus)
+
+            de.checked = modus
+            save.saveBool("de",modus)
+
+            doswitch.checked = modus
+            save.saveBool("do",modus)
+
+            ba.checked = modus
+            save.saveBool("ba",modus)
+
+            bi.checked = modus
+            save.saveBool("bi",modus)
+
+            bu.checked = modus
+            save.saveBool("bu",modus)
+
+            be.checked = modus
+            save.saveBool("be",modus)
+
+            bo.checked = modus
+            save.saveBool("bo",modus)
+
+            pa.checked = modus
+            save.saveBool("pa",modus)
+
+            pi.checked = modus
+            save.saveBool("pi",modus)
+
+            pu.checked = modus
+            save.saveBool("pu",modus)
+
+            pe.checked = modus
+            save.saveBool("pe",modus)
+
+            po.checked = modus
+            save.saveBool("po",modus)
+        }
+
+        function setDigraphs(modus) {
+
+            kya.checked = modus
+            save.saveBool("kya",modus)
+
+            kyu.checked = modus
+            save.saveBool("kyu",modus)
+
+            kyo.checked = modus
+            save.saveBool("kyo",modus)
+
+            sha.checked = modus
+            save.saveBool("sha",modus)
+
+            shu.checked = modus
+            save.saveBool("shu",modus)
+
+            sho.checked = modus
+            save.saveBool("sho",modus)
+
+            cha.checked = modus
+            save.saveBool("cha",modus)
+
+            chu.checked = modus
+            save.saveBool("chu",modus)
+
+            cho.checked = modus
+            save.saveBool("cho",modus)
+
+            nya.checked = modus
+            save.saveBool("nya",modus)
+
+            nyu.checked = modus
+            save.saveBool("nyu",modus)
+
+            nyo.checked = modus
+            save.saveBool("nyo",modus)
+
+            hya.checked = modus
+            save.saveBool("hya",modus)
+
+            hyu.checked = modus
+            save.saveBool("hyu",modus)
+
+            hyo.checked = modus
+            save.saveBool("hyo",modus)
+
+            mya.checked = modus
+            save.saveBool("mya",modus)
+
+            myu.checked = modus
+            save.saveBool("myu",modus)
+
+            myo.checked = modus
+            save.saveBool("myo",modus)
+
+            rya.checked = modus
+            save.saveBool("rya",modus)
+
+            ryu.checked = modus
+            save.saveBool("ryu",modus)
+
+            ryo.checked = modus
+            save.saveBool("ryo",modus)
+        }
+
+        function setDigraphsDiacritics(modus) {
+
+            gya.checked = modus
+            save.saveBool("gya",modus)
+
+            gyu.checked = modus
+            save.saveBool("gyu",modus)
+
+            gyo.checked = modus
+            save.saveBool("gyo",modus)
+
+            ja.checked = modus
+            save.saveBool("ja",modus)
+
+            ju.checked = modus
+            save.saveBool("ju",modus)
+
+            jo.checked = modus
+            save.saveBool("",modus)
+
+            dya.checked = modus
+            save.saveBool("dya",modus)
+
+            dyu.checked = modus
+            save.saveBool("dyu",modus)
+
+            dyo.checked = modus
+            save.saveBool("dyo",modus)
+
+            bya.checked = modus
+            save.saveBool("",modus)
+
+            byu.checked = modus
+            save.saveBool("byu",modus)
+
+            byo.checked = modus
+            save.saveBool("byo",modus)
+
+            pya.checked = modus
+            save.saveBool("pya",modus)
+
+            pyu.checked = modus
+            save.saveBool("pyu",modus)
+
+            pyo.checked = modus
+            save.saveBool("pyo",modus)
+        }
+
         function initialiseTest() {
             testclass.initialise()
 
@@ -695,9 +1034,39 @@ Page {
                 }
             }
 
+            Row {
+                Button {
+                    text: "Enable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Enable all Katakana", function() { startTest.setMonographs(true); startTest.setDigraphs(true); startTest.setDiacritics(true); startTest.setDigraphsDiacritics(true) }, 3000 )
+                }
+
+                Button {
+                    text: "Disable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Disable all Katakana", function() { startTest.setMonographs(false); startTest.setDigraphs(false); startTest.setDiacritics(false); startTest.setDigraphsDiacritics(false) }, 3000 )
+                }
+            }
+
             TextSwitch {
                 id: switchMonographs
                 text: "Monographs"
+            }
+
+            Row {
+                visible: switchMonographs.checked
+
+                Button {
+                    text: "Enable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Enable all Monographs", function() { startTest.setMonographs(true) }, 3000 )
+                }
+
+                Button {
+                    text: "Disable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Disable all Monographs", function() { startTest.setMonographs(false) }, 3000 )
+                }
             }
 
             Grid {
@@ -1221,6 +1590,22 @@ Page {
                 text: "Diacritics"
             }
 
+            Row {
+                visible: switchDiacritics.checked
+
+                Button {
+                    text: "Enable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Enable all Diacritics", function() { startTest.setDiacritics(true) }, 3000 )
+                }
+
+                Button {
+                    text: "Disable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Disable all Diacritics", function() { startTest.setDiacritics(false) }, 3000 )
+                }
+            }
+
             Grid {
                 id: diacriticsGrid
                 columns: 5
@@ -1476,6 +1861,22 @@ Page {
                 text: "Digraphs"
             }
 
+            Row {
+                visible: switchDigraphs.checked
+
+                Button {
+                    text: "Enable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Enable all Digraphs", function() { startTest.setDigraphs(true) }, 3000 )
+                }
+
+                Button {
+                    text: "Disable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Disable all Digraphs", function() { startTest.setDigraphs(false) }, 3000 )
+                }
+            }
+
             Grid {
                 id: digraphsGrid
                 columns: 3
@@ -1702,6 +2103,22 @@ Page {
             TextSwitch {
                 id: switchDigraphsDiacritics
                 text: "Digraphs with Diacritics"
+            }
+
+            Row {
+                visible: switchDigraphsDiacritics.checked
+
+                Button {
+                    text: "Enable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Enable all Digraphs with Diacritics", function() { startTest.setDigraphsDiacritics(true) }, 3000 )
+                }
+
+                Button {
+                    text: "Disable all"
+                    width: mainColumn.width/2
+                    onClicked: remorsePopup.execute("Disable all Digraphs with Diacritics", function() { startTest.setDigraphsDiacritics(false) }, 3000 )
+                }
             }
 
             Grid {
