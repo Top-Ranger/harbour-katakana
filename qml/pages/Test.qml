@@ -40,6 +40,7 @@ Page {
         property int correct: 0
         property int rightanswer: 0
         property bool started: false
+        property bool first: true
         property string picture: "Katakana/empty.png"
         property string valueone: "one"
         property string valuetwo: "two"
@@ -59,6 +60,7 @@ Page {
             if(!variable.started)
             {
                 variable.started = true
+                variable.first = false
                 testclass.newQuestion()
                 variable.picture = testclass.picture()
                 variable.rightanswer = testclass.correct()
@@ -100,15 +102,20 @@ Page {
         function end(i){
             variable.questions++
             variable.sumQuestions++
+            var correct = false
             if(i === variable.rightanswer)
             {
                 variable.correct++
                 variable.sumCorrect++
+                correct = true
             }
             save.saveInt("TestQuestions",variable.sumQuestions)
             save.saveInt("TestCorrect",variable.sumCorrect)
             variable.started = false
-            //TODO: Disable buttons
+            if(correct)
+            {
+                start()
+            }
         }
     }
 
@@ -168,8 +175,9 @@ Page {
 
             Button {
                 id: newQuestion
+                width: parent.width
                 enabled: !variable.started
-                text: "New Question"
+                text: variable.first?"Start":"Continue"
                 onClicked: handleQuestions.start()
             }
             Row {

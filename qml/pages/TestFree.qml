@@ -40,6 +40,7 @@ Page {
         property int correct: 0
         property int rightanswer: 0
         property bool started: false
+        property bool first: true
         property string picture: "Katakana/empty.png"
         property string valuecorrect: ""
         property int sumCorrect: save.getInt("FreeTestCorrect")
@@ -53,6 +54,7 @@ Page {
             if(!variable.started)
             {
                 variable.started = true
+                variable.first = false
                 testclass.newQuestion()
                 variable.picture = testclass.picture()
                 variable.valuecorrect = testclass.valuecorrect()
@@ -66,15 +68,21 @@ Page {
         function end(){
             variable.questions++
             variable.sumQuestions++
+            var correct = false
             if(testclass.sameString(variable.valuecorrect, input.text))
             {
                 variable.correct++
                 variable.sumCorrect++
+                correct = true
 
             }
             save.saveInt("FreeTestQuestions",variable.sumQuestions)
             save.saveInt("FreeTestCorrect",variable.sumCorrect)
             variable.started = false
+            if(correct)
+            {
+                start()
+            }
         }
     }
 
@@ -134,8 +142,9 @@ Page {
 
             Button {
                 id: newQuestion
+                width: parent.width
                 enabled: !variable.started
-                text: "New Question"
+                text: variable.first?"Start":"Continue"
                 onClicked: handleQuestions.start()
             }
             Row {
