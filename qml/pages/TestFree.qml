@@ -34,12 +34,18 @@ import Sailfish.Silica 1.0
 Page {
     id: test
 
+    RemorsePopup {
+        id: remorsePopup
+        onCanceled: variable.enableButton = true
+    }
+
     Item {
         id: variable
         property int questions: 0
         property int correct: 0
         property int rightanswer: 0
         property bool started: false
+        property bool enableButton: true
         property bool first: true
         property string picture: "Katakana/empty.png"
         property string valuecorrect: ""
@@ -54,6 +60,7 @@ Page {
             if(!variable.started)
             {
                 variable.started = true
+                variable.enableButton = false
                 variable.first = false
                 testclass.newQuestion()
                 variable.picture = testclass.picture()
@@ -74,14 +81,17 @@ Page {
                 variable.correct++
                 variable.sumCorrect++
                 correct = true
-
+            }
+            else
+            {
+                variable.enableButton = true
             }
             save.saveInt("FreeTestQuestions",variable.sumQuestions)
             save.saveInt("FreeTestCorrect",variable.sumCorrect)
             variable.started = false
             if(correct)
             {
-                start()
+                remorsePopup.execute("Correct! Next Question", function() { start() }, 2000 )
             }
         }
     }
@@ -140,14 +150,8 @@ Page {
                 }
             }
 
-            Button {
-                id: newQuestion
-                width: parent.width
-                enabled: !variable.started
-                text: variable.first?"Start":"Continue"
-                onClicked: handleQuestions.start()
-            }
             Row {
+                x: parent.width/2 - target.width
                 Image {
                     id: target
                     source: variable.picture
@@ -171,6 +175,13 @@ Page {
                 inputMethodHints: Qt.ImhNoPredictiveText
             }
 
+            Button {
+                id: newQuestion
+                width: parent.width
+                enabled: variable.enableButton
+                text: variable.first?"Start":"Continue"
+                onClicked: handleQuestions.start()
+            }
         }
     }
 }
