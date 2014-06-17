@@ -83,6 +83,8 @@ private:
     int _correct;
     int _question;
     QString _valuecorrect;
+    QString _lastCorrect;
+    QString _lastPicture;
 
 };
 

@@ -40,6 +40,8 @@ void Testclass::initialise()
 {
     elementlist.clear();
     _question = 0;
+    _lastCorrect = "";
+    _lastPicture = "";
 }
 
 void Testclass::add(QString name, QString path)
@@ -87,6 +89,7 @@ void Testclass::newQuestion()
                 case 4:
                     _four = e.Name;
                     _four_picture = e.ImagePath;
+                    _valuecorrect = _four;
                     break;
                 case 5:
                     _five = e.Name;
@@ -99,15 +102,82 @@ void Testclass::newQuestion()
                 default:
                     throw "Something went terribly wrong!";
                 }
-                if(i == _correct)
-                {
-                    _picture = e.ImagePath;
-                    _valuecorrect = e.Name;
-                }
                 elementlist.replace(random, e);
             }
         }while(test);
     }
+
+    test = true;
+
+    do{
+        _correct = (_correct%6)+1;
+
+        switch(_correct)
+        {
+        case 1:
+            if(_one != _lastCorrect && _one_picture != _lastPicture)
+            {
+                _picture = _one_picture;
+                _valuecorrect = _one;
+                _lastPicture = _one_picture;
+                _lastCorrect = _one;
+                test = false;
+            }
+            break;
+        case 2:
+            if(_two != _lastCorrect && _two_picture != _lastPicture)
+            {
+                _picture = _two_picture;
+                _valuecorrect = _two;
+                _lastPicture = _two_picture;
+                _lastCorrect = _two;
+                test = false;
+            }
+            break;
+        case 3:
+            if(_three != _lastCorrect && _three_picture != _lastPicture)
+            {
+                _picture = _three_picture;
+                _valuecorrect = _three;
+                _lastPicture = _three_picture;
+                _lastCorrect = _three;
+                test = false;
+            }
+            break;
+        case 4:
+            if(_four != _lastCorrect && _four_picture != _lastPicture)
+            {
+                _picture = _four_picture;
+                _valuecorrect = _four;
+                _lastPicture = _four_picture;
+                _lastCorrect = _four;
+                test = false;
+            }
+            break;
+        case 5:
+            if(_five != _lastCorrect && _five_picture != _lastPicture)
+            {
+                _picture = _five_picture;
+                _valuecorrect = _five;
+                _lastPicture = _five_picture;
+                _lastCorrect = _five;
+                test = false;
+            }
+            break;
+        case 6:
+            if(_six != _lastCorrect && _six_picture != _lastPicture)
+            {
+                _picture = _six_picture;
+                _valuecorrect = _six;
+                _lastPicture = _six_picture;
+                _lastCorrect = _six;
+                test = false;
+            }
+            break;
+        default:
+            throw "Something went terribly wrong!";
+        }
+    }while(test);
 }
 
 QString Testclass::picture()
