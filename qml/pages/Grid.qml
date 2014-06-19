@@ -995,6 +995,8 @@ Page {
         Column {
             id: mainColumn
 
+            width: parent.width
+
             anchors {
                 left: parent.left
                 right: parent.right
@@ -1052,6 +1054,7 @@ Page {
 
             TextSwitch {
                 id: switchMonographs
+                width: parent.width
                 text: "Monographs"
             }
 
@@ -1075,6 +1078,7 @@ Page {
 
             Grid {
                 id: monographsGrid
+                width: parent.width
                 columns: 5
                 visible: switchMonographs.checked
 
@@ -1082,47 +1086,57 @@ Page {
 
                 Switch {
                     id: a
+                    width: parent.width / 5
                     icon.source: "Katakana/a.png"
                     checked: save.getBool("a")
                     onClicked: {save.saveBool("a",checked)}
                 }
                 Switch {
                     id: i
+                    width: parent.width / 5
                     icon.source: "Katakana/i.png"
                     checked: save.getBool("i")
                     onClicked: {save.saveBool("i",checked)}
                 }
                 Switch {
                     id: u
+                    width: parent.width / 5
                     icon.source: "Katakana/u.png"
                     checked: save.getBool("u")
                     onClicked: {save.saveBool("u",checked)}
                 }
                 Switch {
                     id: e
+                    width: parent.width / 5
                     icon.source: "Katakana/e.png"
                     checked: save.getBool("e")
                     onClicked: {save.saveBool("e",checked)}
                 }
                 Switch {
                     id: o
+                    width: parent.width / 5
                     icon.source: "Katakana/o.png"
                     checked: save.getBool("o")
                     onClicked: {save.saveBool("o",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     a"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     i"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     u"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     e"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     o"
                 }
 
@@ -1130,47 +1144,57 @@ Page {
 
                 Switch {
                     id: ka
+                    width: parent.width / 5
                     icon.source: "Katakana/ka.png"
                     checked: save.getBool("ka")
                     onClicked: {save.saveBool("ka",checked)}
                 }
                 Switch {
                     id: ki
+                    width: parent.width / 5
                     icon.source: "Katakana/ki.png"
                     checked: save.getBool("ki")
                     onClicked: {save.saveBool("ki",checked)}
                 }
                 Switch {
                     id: ku
+                    width: parent.width / 5
                     icon.source: "Katakana/ku.png"
                     checked: save.getBool("ku")
                     onClicked: {save.saveBool("ku",checked)}
                 }
                 Switch {
                     id: ke
+                    width: parent.width / 5
                     icon.source: "Katakana/ke.png"
                     checked: save.getBool("ke")
                     onClicked: {save.saveBool("ke",checked)}
                 }
                 Switch {
                     id: ko
+                    width: parent.width / 5
                     icon.source: "Katakana/ko.png"
                     checked: save.getBool("ko")
                     onClicked: {save.saveBool("ko",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ka"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ki"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ku"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ke"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ko"
                 }
 
@@ -1178,47 +1202,57 @@ Page {
 
                 Switch {
                     id: sa
+                    width: parent.width / 5
                     icon.source: "Katakana/sa.png"
                     checked: save.getBool("sa")
                     onClicked: {save.saveBool("sa",checked)}
                 }
                 Switch {
                     id: shi
+                    width: parent.width / 5
                     icon.source: "Katakana/shi.png"
                     checked: save.getBool("shi")
                     onClicked: {save.saveBool("shi",checked)}
                 }
                 Switch {
                     id: su
+                    width: parent.width / 5
                     icon.source: "Katakana/su.png"
                     checked: save.getBool("su")
                     onClicked: {save.saveBool("su",checked)}
                 }
                 Switch {
                     id: se
+                    width: parent.width / 5
                     icon.source: "Katakana/se.png"
                     checked: save.getBool("se")
                     onClicked: {save.saveBool("se",checked)}
                 }
                 Switch {
                     id: so
+                    width: parent.width / 5
                     icon.source: "Katakana/so.png"
                     checked: save.getBool("so")
                     onClicked: {save.saveBool("so",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     sa"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     shi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     su"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     se"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     so"
                 }
 
@@ -1227,47 +1261,57 @@ Page {
 
                 Switch {
                     id: ta
+                    width: parent.width / 5
                     icon.source: "Katakana/ta.png"
                     checked: save.getBool("ta")
                     onClicked: {save.saveBool("ta",checked)}
                 }
                 Switch {
                     id: chi
+                    width: parent.width / 5
                     icon.source: "Katakana/chi.png"
                     checked: save.getBool("chi")
                     onClicked: {save.saveBool("chi",checked)}
                 }
                 Switch {
                     id: tsu
+                    width: parent.width / 5
                     icon.source: "Katakana/tsu.png"
                     checked: save.getBool("tsu")
                     onClicked: {save.saveBool("tsu",checked)}
                 }
                 Switch {
                     id: te
+                    width: parent.width / 5
                     icon.source: "Katakana/te.png"
                     checked: save.getBool("te")
                     onClicked: {save.saveBool("te",checked)}
                 }
                 Switch {
                     id: to
+                    width: parent.width / 5
                     icon.source: "Katakana/to.png"
                     checked: save.getBool("to")
                     onClicked: {save.saveBool("to",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ta"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     chi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     tsu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     te"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     to"
                 }
 
@@ -1276,47 +1320,57 @@ Page {
 
                 Switch {
                     id: na
+                    width: parent.width / 5
                     icon.source: "Katakana/na.png"
                     checked: save.getBool("na")
                     onClicked: {save.saveBool("na",checked)}
                 }
                 Switch {
                     id: ni
+                    width: parent.width / 5
                     icon.source: "Katakana/ni.png"
                     checked: save.getBool("ni")
                     onClicked: {save.saveBool("ni",checked)}
                 }
                 Switch {
                     id: nu
+                    width: parent.width / 5
                     icon.source: "Katakana/nu.png"
                     checked: save.getBool("nu")
                     onClicked: {save.saveBool("nu",checked)}
                 }
                 Switch {
                     id: ne
+                    width: parent.width / 5
                     icon.source: "Katakana/ne.png"
                     checked: save.getBool("ne")
                     onClicked: {save.saveBool("ne",checked)}
                 }
                 Switch {
                     id: no
+                    width: parent.width / 5
                     icon.source: "Katakana/no.png"
                     checked: save.getBool("no")
                     onClicked: {save.saveBool("no",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     na"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ni"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     nu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ne"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     no"
                 }
 
@@ -1324,47 +1378,57 @@ Page {
 
                 Switch {
                     id: ha
+                    width: parent.width / 5
                     icon.source: "Katakana/ha.png"
                     checked: save.getBool("ha")
                     onClicked: {save.saveBool("ha",checked)}
                 }
                 Switch {
                     id: hi
+                    width: parent.width / 5
                     icon.source: "Katakana/hi.png"
                     checked: save.getBool("hi")
                     onClicked: {save.saveBool("hi",checked)}
                 }
                 Switch {
                     id: fu
+                    width: parent.width / 5
                     icon.source: "Katakana/fu.png"
                     checked: save.getBool("fu")
                     onClicked: {save.saveBool("fu",checked)}
                 }
                 Switch {
                     id: he
+                    width: parent.width / 5
                     icon.source: "Katakana/he.png"
                     checked: save.getBool("he")
                     onClicked: {save.saveBool("he",checked)}
                 }
                 Switch {
                     id: ho
+                    width: parent.width / 5
                     icon.source: "Katakana/ho.png"
                     checked: save.getBool("ho")
                     onClicked: {save.saveBool("ho",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ha"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     hi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     fu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     he"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ho"
                 }
 
@@ -1372,47 +1436,57 @@ Page {
 
                 Switch {
                     id: ma
+                    width: parent.width / 5
                     icon.source: "Katakana/ma.png"
                     checked: save.getBool("ma")
                     onClicked: {save.saveBool("ma",checked)}
                 }
                 Switch {
                     id: mi
+                    width: parent.width / 5
                     icon.source: "Katakana/mi.png"
                     checked: save.getBool("mi")
                     onClicked: {save.saveBool("mi",checked)}
                 }
                 Switch {
                     id: mu
+                    width: parent.width / 5
                     icon.source: "Katakana/mu.png"
                     checked: save.getBool("mu")
                     onClicked: {save.saveBool("mu",checked)}
                 }
                 Switch {
                     id: me
+                    width: parent.width / 5
                     icon.source: "Katakana/me.png"
                     checked: save.getBool("me")
                     onClicked: {save.saveBool("me",checked)}
                 }
                 Switch {
                     id: mo
+                    width: parent.width / 5
                     icon.source: "Katakana/mo.png"
                     checked: save.getBool("mo")
                     onClicked: {save.saveBool("mo",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ma"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     mi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     mu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     me"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     mo"
                 }
 
@@ -1421,41 +1495,51 @@ Page {
 
                 Switch {
                     id: ya
+                    width: parent.width / 5
                     icon.source: "Katakana/ya.png"
                     checked: save.getBool("ya")
                     onClicked: {save.saveBool("ya",checked)}
                 }
                 Image {
+                    width: parent.width / 5
                     source: "Katakana/empty.png"
                 }
                 Switch {
                     id: yu
+                    width: parent.width / 5
                     icon.source: "Katakana/yu.png"
                     checked: save.getBool("yu")
                     onClicked: {save.saveBool("yu",checked)}
                 }
                 Image {
+                    width: parent.width / 5
                     source: "Katakana/empty.png"
                 }
                 Switch {
                     id: yo
+                    width: parent.width / 5
                     icon.source: "Katakana/yo.png"
                     checked: save.getBool("yo")
                     onClicked: {save.saveBool("yo",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ya"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "      "
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     yu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "      "
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     yo"
                 }
 
@@ -1463,47 +1547,57 @@ Page {
 
                 Switch {
                     id: ra
+                    width: parent.width / 5
                     icon.source: "Katakana/ra.png"
                     checked: save.getBool("ra")
                     onClicked: {save.saveBool("ra",checked)}
                 }
                 Switch {
                     id: ri
+                    width: parent.width / 5
                     icon.source: "Katakana/ri.png"
                     checked: save.getBool("ri")
                     onClicked: {save.saveBool("ri",checked)}
                 }
                 Switch {
                     id: ru
+                    width: parent.width / 5
                     icon.source: "Katakana/ru.png"
                     checked: save.getBool("ru")
                     onClicked: {save.saveBool("ru",checked)}
                 }
                 Switch {
                     id: re
+                    width: parent.width / 5
                     icon.source: "Katakana/re.png"
                     checked: save.getBool("re")
                     onClicked: {save.saveBool("re",checked)}
                 }
                 Switch {
                     id: ro
+                    width: parent.width / 5
                     icon.source: "Katakana/ro.png"
                     checked: save.getBool("ro")
                     onClicked: {save.saveBool("ro",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ra"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ri"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ru"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     re"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ro"
                 }
 
@@ -1511,86 +1605,107 @@ Page {
 
                 Switch {
                     id: wa
+                    width: parent.width / 5
                     icon.source: "Katakana/wa.png"
                     checked: save.getBool("wa")
                     onClicked: {save.saveBool("wa",checked)}
                 }
                 Switch {
                     id: wi
+                    width: parent.width / 5
                     icon.source: "Katakana/wi.png"
                     checked: save.getBool("wi")
                     onClicked: {save.saveBool("wi",checked)}
                 }
                 Image {
+                    width: parent.width / 5
                     source: "Katakana/empty.png"
                 }
                 Switch {
                     id: we
+                    width: parent.width / 5
                     icon.source: "Katakana/we.png"
                     checked: save.getBool("we")
                     onClicked: {save.saveBool("we",checked)}
                 }
                 Switch {
                     id: wo
+                    width: parent.width / 5
                     icon.source: "Katakana/wo.png"
                     checked: save.getBool("wo")
                     onClicked: {save.saveBool("wo",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     wa"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     wi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "      "
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     we"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     wo"
                 }
 
                 // "n"
 
                 Image {
+                    width: parent.width / 5
                     source: "Katakana/empty.png"
                 }
                 Image {
+                    width: parent.width / 5
                     source: "Katakana/empty.png"
                 }
                 Image {
+                    width: parent.width / 5
                     source: "Katakana/empty.png"
                 }
                 Image {
+                    width: parent.width / 5
                     source: "Katakana/empty.png"
                 }
                 Switch {
                     id: n
+                    width: parent.width / 5
                     icon.source: "Katakana/n.png"
                     checked: save.getBool("n")
                     onClicked: {save.saveBool("n",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "      "
                 }
                 Label{
+                    width: parent.width / 5
                     text: "      "
                 }
                 Label{
+                    width: parent.width / 5
                     text: "      "
                 }
                 Label{
+                    width: parent.width / 5
                     text: "      "
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     n"
                 }
             } // End grid
 
             TextSwitch {
                 id: switchDiacritics
+                width: parent.width
                 text: "Diacritics"
             }
 
@@ -1614,6 +1729,7 @@ Page {
 
             Grid {
                 id: diacriticsGrid
+                width: parent.width
                 columns: 5
                 visible: switchDiacritics.checked
 
@@ -1621,47 +1737,57 @@ Page {
 
                 Switch {
                     id: ga
+                    width: parent.width / 5
                     icon.source: "Katakana/ga.png"
                     checked: save.getBool("ga")
                     onClicked: {save.saveBool("ga",checked)}
                 }
                 Switch {
                     id: gi
+                    width: parent.width / 5
                     icon.source: "Katakana/gi.png"
                     checked: save.getBool("gi")
                     onClicked: {save.saveBool("gi",checked)}
                 }
                 Switch {
                     id: gu
+                    width: parent.width / 5
                     icon.source: "Katakana/gu.png"
                     checked: save.getBool("gu")
                     onClicked: {save.saveBool("gu",checked)}
                 }
                 Switch {
                     id: ge
+                    width: parent.width / 5
                     icon.source: "Katakana/ge.png"
                     checked: save.getBool("ge")
                     onClicked: {save.saveBool("ge",checked)}
                 }
                 Switch {
                     id: go
+                    width: parent.width / 5
                     icon.source: "Katakana/go.png"
                     checked: save.getBool("go")
                     onClicked: {save.saveBool("go",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ga"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     gi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     gu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ge"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     go"
                 }
 
@@ -1670,47 +1796,57 @@ Page {
 
                 Switch {
                     id: za
+                    width: parent.width / 5
                     icon.source: "Katakana/za.png"
                     checked: save.getBool("za")
                     onClicked: {save.saveBool("za",checked)}
                 }
                 Switch {
                     id: ji
+                    width: parent.width / 5
                     icon.source: "Katakana/ji.png"
                     checked: save.getBool("ji")
                     onClicked: {save.saveBool("ji",checked)}
                 }
                 Switch {
                     id: zu
+                    width: parent.width / 5
                     icon.source: "Katakana/zu.png"
                     checked: save.getBool("zu")
                     onClicked: {save.saveBool("zu",checked)}
                 }
                 Switch {
                     id: ze
+                    width: parent.width / 5
                     icon.source: "Katakana/ze.png"
                     checked: save.getBool("ze")
                     onClicked: {save.saveBool("ze",checked)}
                 }
                 Switch {
                     id: zo
+                    width: parent.width / 5
                     icon.source: "Katakana/zo.png"
                     checked: save.getBool("zo")
                     onClicked: {save.saveBool("zo",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     za"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ji/zi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     zu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ze"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     zo"
                 }
 
@@ -1719,47 +1855,57 @@ Page {
 
                 Switch {
                     id: da
+                    width: parent.width / 5
                     icon.source: "Katakana/da.png"
                     checked: save.getBool("da")
                     onClicked: {save.saveBool("da",checked)}
                 }
                 Switch {
                     id: di
+                    width: parent.width / 5
                     icon.source: "Katakana/di.png"
                     checked: save.getBool("di")
                     onClicked: {save.saveBool("di",checked)}
                 }
                 Switch {
                     id: du
+                    width: parent.width / 5
                     icon.source: "Katakana/du.png"
                     checked: save.getBool("du")
                     onClicked: {save.saveBool("du",checked)}
                 }
                 Switch {
                     id: de
+                    width: parent.width / 5
                     icon.source: "Katakana/de.png"
                     checked: save.getBool("de")
                     onClicked: {save.saveBool("de",checked)}
                 }
                 Switch {
                     id: doswitch
+                    width: parent.width / 5
                     icon.source: "Katakana/do.png"
                     checked: save.getBool("do")
                     onClicked: {save.saveBool("do",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     da"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ji/di"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     zu/du"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     de"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     do"
                 }
 
@@ -1767,47 +1913,57 @@ Page {
 
                 Switch {
                     id: ba
+                    width: parent.width / 5
                     icon.source: "Katakana/ba.png"
                     checked: save.getBool("ba")
                     onClicked: {save.saveBool("ba",checked)}
                 }
                 Switch {
                     id: bi
+                    width: parent.width / 5
                     icon.source: "Katakana/bi.png"
                     checked: save.getBool("bi")
                     onClicked: {save.saveBool("bi",checked)}
                 }
                 Switch {
                     id: bu
+                    width: parent.width / 5
                     icon.source: "Katakana/bu.png"
                     checked: save.getBool("bu")
                     onClicked: {save.saveBool("bu",checked)}
                 }
                 Switch {
                     id: be
+                    width: parent.width / 5
                     icon.source: "Katakana/be.png"
                     checked: save.getBool("be")
                     onClicked: {save.saveBool("be",checked)}
                 }
                 Switch {
                     id: bo
+                    width: parent.width / 5
                     icon.source: "Katakana/bo.png"
                     checked: save.getBool("bo")
                     onClicked: {save.saveBool("bo",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     ba"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     bi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     bu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     be"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     bo"
                 }
 
@@ -1816,47 +1972,57 @@ Page {
 
                 Switch {
                     id: pa
+                    width: parent.width / 5
                     icon.source: "Katakana/pa.png"
                     checked: save.getBool("pa")
                     onClicked: {save.saveBool("pa",checked)}
                 }
                 Switch {
                     id: pi
+                    width: parent.width / 5
                     icon.source: "Katakana/pi.png"
                     checked: save.getBool("pi")
                     onClicked: {save.saveBool("pi",checked)}
                 }
                 Switch {
                     id: pu
+                    width: parent.width / 5
                     icon.source: "Katakana/pu.png"
                     checked: save.getBool("pu")
                     onClicked: {save.saveBool("pu",checked)}
                 }
                 Switch {
                     id: pe
+                    width: parent.width / 5
                     icon.source: "Katakana/pe.png"
                     checked: save.getBool("pe")
                     onClicked: {save.saveBool("pe",checked)}
                 }
                 Switch {
                     id: po
+                    width: parent.width / 5
                     icon.source: "Katakana/po.png"
                     checked: save.getBool("po")
                     onClicked: {save.saveBool("po",checked)}
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     pa"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     pi"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     pu"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     pe"
                 }
                 Label{
+                    width: parent.width / 5
                     text: "     po"
                 }
 
@@ -1864,6 +2030,7 @@ Page {
 
             TextSwitch {
                 id: switchDigraphs
+                width: parent.width
                 text: "Digraphs"
             }
 
@@ -1887,6 +2054,7 @@ Page {
 
             Grid {
                 id: digraphsGrid
+                width: parent.width
                 columns: 3
                 visible: switchDigraphs.checked
 
@@ -1894,29 +2062,35 @@ Page {
 
                 Switch {
                     id: kya
+                    width: parent.width / 3
                     icon.source: "Katakana/kya.png"
                     checked: save.getBool("kya")
                     onClicked: {save.saveBool("kya",checked)}
                 }
                 Switch {
                     id: kyu
+                    width: parent.width / 3
                     icon.source: "Katakana/kyu.png"
                     checked: save.getBool("kyu")
                     onClicked: {save.saveBool("kyu",checked)}
                 }
                 Switch {
                     id: kyo
+                    width: parent.width / 3
                     icon.source: "Katakana/kyo.png"
                     checked: save.getBool("kyo")
                     onClicked: {save.saveBool("kyo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         kya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         kyu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         kyo"
                 }
 
@@ -1925,29 +2099,35 @@ Page {
 
                 Switch {
                     id: sha
+                    width: parent.width / 3
                     icon.source: "Katakana/sha.png"
                     checked: save.getBool("sha")
                     onClicked: {save.saveBool("sha",checked)}
                 }
                 Switch {
                     id: shu
+                    width: parent.width / 3
                     icon.source: "Katakana/shu.png"
                     checked: save.getBool("shu")
                     onClicked: {save.saveBool("shu",checked)}
                 }
                 Switch {
                     id: sho
+                    width: parent.width / 3
                     icon.source: "Katakana/sho.png"
                     checked: save.getBool("sho")
                     onClicked: {save.saveBool("sho",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         sha"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         shu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         sho"
                 }
 
@@ -1956,29 +2136,35 @@ Page {
 
                 Switch {
                     id: cha
+                    width: parent.width / 3
                     icon.source: "Katakana/cha.png"
                     checked: save.getBool("cha")
                     onClicked: {save.saveBool("cha",checked)}
                 }
                 Switch {
                     id: chu
+                    width: parent.width / 3
                     icon.source: "Katakana/chu.png"
                     checked: save.getBool("chu")
                     onClicked: {save.saveBool("chu",checked)}
                 }
                 Switch {
                     id: cho
+                    width: parent.width / 3
                     icon.source: "Katakana/cho.png"
                     checked: save.getBool("cho")
                     onClicked: {save.saveBool("cho",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         cha"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         chu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         cho"
                 }
 
@@ -1987,29 +2173,35 @@ Page {
 
                 Switch {
                     id: nya
+                    width: parent.width / 3
                     icon.source: "Katakana/nya.png"
                     checked: save.getBool("nya")
                     onClicked: {save.saveBool("nya",checked)}
                 }
                 Switch {
                     id: nyu
+                    width: parent.width / 3
                     icon.source: "Katakana/nyu.png"
                     checked: save.getBool("nyu")
                     onClicked: {save.saveBool("nyu",checked)}
                 }
                 Switch {
                     id: nyo
+                    width: parent.width / 3
                     icon.source: "Katakana/nyo.png"
                     checked: save.getBool("nyo")
                     onClicked: {save.saveBool("nyo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         nya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         nyu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         nyo"
                 }
 
@@ -2018,29 +2210,35 @@ Page {
 
                 Switch {
                     id: hya
+                    width: parent.width / 3
                     icon.source: "Katakana/hya.png"
                     checked: save.getBool("hya")
                     onClicked: {save.saveBool("hya",checked)}
                 }
                 Switch {
                     id: hyu
+                    width: parent.width / 3
                     icon.source: "Katakana/hyu.png"
                     checked: save.getBool("hyu")
                     onClicked: {save.saveBool("hyu",checked)}
                 }
                 Switch {
                     id: hyo
+                    width: parent.width / 3
                     icon.source: "Katakana/hyo.png"
                     checked: save.getBool("hyo")
                     onClicked: {save.saveBool("hyo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         hya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         hyu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         hyo"
                 }
 
@@ -2049,29 +2247,35 @@ Page {
 
                 Switch {
                     id: mya
+                    width: parent.width / 3
                     icon.source: "Katakana/mya.png"
                     checked: save.getBool("mya")
                     onClicked: {save.saveBool("mya",checked)}
                 }
                 Switch {
                     id: myu
+                    width: parent.width / 3
                     icon.source: "Katakana/myu.png"
                     checked: save.getBool("myu")
                     onClicked: {save.saveBool("myu",checked)}
                 }
                 Switch {
                     id: myo
+                    width: parent.width / 3
                     icon.source: "Katakana/myo.png"
                     checked: save.getBool("myo")
                     onClicked: {save.saveBool("myo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         mya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         myu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         myo"
                 }
 
@@ -2080,29 +2284,35 @@ Page {
 
                 Switch {
                     id: rya
+                    width: parent.width / 3
                     icon.source: "Katakana/rya.png"
                     checked: save.getBool("rya")
                     onClicked: {save.saveBool("rya",checked)}
                 }
                 Switch {
                     id: ryu
+                    width: parent.width / 3
                     icon.source: "Katakana/ryu.png"
                     checked: save.getBool("ryu")
                     onClicked: {save.saveBool("ryu",checked)}
                 }
                 Switch {
                     id: ryo
+                    width: parent.width / 3
                     icon.source: "Katakana/ryo.png"
                     checked: save.getBool("ryo")
                     onClicked: {save.saveBool("ryo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         rya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         ryu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         ryo"
                 }
 
@@ -2110,6 +2320,7 @@ Page {
 
             TextSwitch {
                 id: switchDigraphsDiacritics
+                width: parent.width
                 text: "Digraphs with Diacritics"
             }
 
@@ -2133,6 +2344,7 @@ Page {
 
             Grid {
                 id: digraphsDiacriticsGrid
+                width: parent.width
                 columns: 3
                 visible: switchDigraphsDiacritics.checked
 
@@ -2140,29 +2352,35 @@ Page {
 
                 Switch {
                     id: gya
+                    width: parent.width / 3
                     icon.source: "Katakana/gya.png"
                     checked: save.getBool("gya")
                     onClicked: {save.saveBool("gya",checked)}
                 }
                 Switch {
                     id: gyu
+                    width: parent.width / 3
                     icon.source: "Katakana/gyu.png"
                     checked: save.getBool("gyu")
                     onClicked: {save.saveBool("gyu",checked)}
                 }
                 Switch {
                     id: gyo
+                    width: parent.width / 3
                     icon.source: "Katakana/gyo.png"
                     checked: save.getBool("gyo")
                     onClicked: {save.saveBool("gyo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         gya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         gyu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         gyo"
                 }
 
@@ -2171,29 +2389,35 @@ Page {
 
                 Switch {
                     id: ja
+                    width: parent.width / 3
                     icon.source: "Katakana/ja.png"
                     checked: save.getBool("ja")
                     onClicked: {save.saveBool("ja",checked)}
                 }
                 Switch {
                     id: ju
+                    width: parent.width / 3
                     icon.source: "Katakana/ju.png"
                     checked: save.getBool("ju")
                     onClicked: {save.saveBool("ju",checked)}
                 }
                 Switch {
                     id: jo
+                    width: parent.width / 3
                     icon.source: "Katakana/jo.png"
                     checked: save.getBool("jo")
                     onClicked: {save.saveBool("jo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         ja"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         ju"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         jo"
                 }
 
@@ -2201,29 +2425,35 @@ Page {
 
                 Switch {
                     id: dya
+                    width: parent.width / 3
                     icon.source: "Katakana/dya.png"
                     checked: save.getBool("dya")
                     onClicked: {save.saveBool("dya",checked)}
                 }
                 Switch {
                     id: dyu
+                    width: parent.width / 3
                     icon.source: "Katakana/dyu.png"
                     checked: save.getBool("dyu")
                     onClicked: {save.saveBool("dyu",checked)}
                 }
                 Switch {
                     id: dyo
+                    width: parent.width / 3
                     icon.source: "Katakana/dyo.png"
                     checked: save.getBool("dyo")
                     onClicked: {save.saveBool("dyo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         ja(d)"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         ju(d)"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         jo(d)"
                 }
 
@@ -2232,29 +2462,35 @@ Page {
 
                 Switch {
                     id: bya
+                    width: parent.width / 3
                     icon.source: "Katakana/bya.png"
                     checked: save.getBool("bya")
                     onClicked: {save.saveBool("bya",checked)}
                 }
                 Switch {
                     id: byu
+                    width: parent.width / 3
                     icon.source: "Katakana/byu.png"
                     checked: save.getBool("byu")
                     onClicked: {save.saveBool("byu",checked)}
                 }
                 Switch {
                     id: byo
+                    width: parent.width / 3
                     icon.source: "Katakana/byo.png"
                     checked: save.getBool("byo")
                     onClicked: {save.saveBool("byo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         bya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         byu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         byo"
                 }
 
@@ -2263,29 +2499,35 @@ Page {
 
                 Switch {
                     id: pya
+                    width: parent.width / 3
                     icon.source: "Katakana/pya.png"
                     checked: save.getBool("pya")
                     onClicked: {save.saveBool("pya",checked)}
                 }
                 Switch {
                     id: pyu
+                    width: parent.width / 3
                     icon.source: "Katakana/pyu.png"
                     checked: save.getBool("pyu")
                     onClicked: {save.saveBool("pyu",checked)}
                 }
                 Switch {
                     id: pyo
+                    width: parent.width / 3
                     icon.source: "Katakana/pyo.png"
                     checked: save.getBool("pyo")
                     onClicked: {save.saveBool("pyo",checked)}
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         pya"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         pyu"
                 }
                 Label{
+                    width: parent.width / 3
                     text: "         pyo"
                 }
 
