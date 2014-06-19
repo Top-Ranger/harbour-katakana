@@ -34,10 +34,20 @@ import Sailfish.Silica 1.0
 Page {
     id: test
 
-    RemorsePopup {
-        id: remorsePopup
-        onCanceled: variable.enableButton = true
+    UpperPanel {
+        id: correctPanel
+        color: "green"
+        text: "Correct"
+        onTriggered: handleQuestions.start()
     }
+
+    UpperPanel {
+        id: falsePanel
+        color: "red"
+        text: "Wrong"
+        onTriggered: variable.enableButton = true
+    }
+
 
     Item {
         id: variable
@@ -116,16 +126,16 @@ Page {
                 variable.sumCorrect++
                 correct = true
             }
-            else
-            {
-                variable.enableButton = true
-            }
             save.saveInt("ReverseTestQuestions",variable.sumQuestions)
             save.saveInt("ReverseTestCorrect",variable.sumCorrect)
             variable.started = false
             if(correct)
             {
-                remorsePopup.execute("Correct! Next Question", function() { start() }, 2000 )
+                correctPanel.show()
+            }
+            else
+            {
+                falsePanel.show()
             }
         }
     }
