@@ -54,7 +54,7 @@ Item {
     DockedPanel {
         id: panel
         width: parent.width
-        height: parent.height
+        height: Theme.itemSizeLarge
         dock: Dock.Top
 
         Rectangle {

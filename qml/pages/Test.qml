@@ -34,20 +34,6 @@ import Sailfish.Silica 1.0
 Page {
     id: test
 
-    UpperPanel {
-        id: correctPanel
-        color: "green"
-        text: "Correct"
-        onTriggered: handleQuestions.start()
-    }
-
-    UpperPanel {
-        id: falsePanel
-        color: "red"
-        text: "Wrong"
-        onTriggered: variable.enableButton = true
-    }
-
     Item {
         id: variable
         property int questions: 0
@@ -267,5 +253,18 @@ Page {
             }
         }
     }
-}
 
+    UpperPanel {
+        id: correctPanel
+        color: "green"
+        text: "Correct"
+        onTriggered: handleQuestions.start()
+    }
+
+    UpperPanel {
+        id: falsePanel
+        color: "red"
+        text: "Wrong"
+        onTriggered: variable.enableButton = true
+    }
+}
