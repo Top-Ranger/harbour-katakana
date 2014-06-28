@@ -138,7 +138,8 @@ OTHER_FILES += qml/harbour-katakana.qml \
     LICENSE.txt \
     harbour-katakana.png \
     qml/cover/cover.png \
-    qml/pages/UpperPanel.qml
+    qml/pages/UpperPanel.qml \
+    qml/pages/Settings.qml
 
 HEADERS += \
     src/listelement.h \

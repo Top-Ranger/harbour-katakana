@@ -82,11 +82,25 @@ Page {
             variable.started = false
             if(correct)
             {
-                correctPanel.show()
+                if(save.getBool("CorrectDisabled"))
+                {
+                    handleQuestions.start()
+                }
+                else
+                {
+                    correctPanel.show()
+                }
             }
             else
             {
-                falsePanel.show()
+                if(save.getBool("CorrectDisabled"))
+                {
+                    variable.enableButton = true
+                }
+                else
+                {
+                    falsePanel.show()
+                }
             }
         }
     }
@@ -182,6 +196,7 @@ Page {
 
     UpperPanel {
         id: correctPanel
+        time: save.getInt("TimeCorrect") === 0 ? 2000: save.getInt("TimeCorrect")
         color: "green"
         text: "Correct"
         onTriggered: handleQuestions.start()
@@ -189,6 +204,7 @@ Page {
 
     UpperPanel {
         id: falsePanel
+        time: save.getInt("TimeWrong") === 0 ? 2000 : save.getInt("TimeWrong")
         color: "red"
         text: "Wrong"
         onTriggered: variable.enableButton = true

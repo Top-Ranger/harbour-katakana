@@ -975,8 +975,8 @@ Page {
             }
 
             MenuItem {
-                text: "Delete save"
-                onClicked: remorsePopup.execute("Delete save", function() {save.clear(); save.saveNow(); pageStack.replace(Qt.resolvedUrl("Grid.qml")) } )
+                text: "Settings"
+                onClicked: pageStack.push(Qt.resolvedUrl("Settings.qml"))
             }
 
 
