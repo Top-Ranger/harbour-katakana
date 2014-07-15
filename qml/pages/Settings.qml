@@ -93,7 +93,7 @@ Dialog {
                 width: parent.width
                 checked: save.getBool("WrongDisabled")
                 text: "Disable 'Wrong'-Popup"
-                description: "Disables the Answer-Popup which is shown in tests on correct answers"
+                description: "Disables the Answer-Popup which is shown in tests on wrong answers"
             }
 
             Slider {
