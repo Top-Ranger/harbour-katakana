@@ -84,7 +84,14 @@ Page {
             {
                 if(save.getBool("CorrectDisabled"))
                 {
-                    handleQuestions.start()
+                    if(save.getBool("NextAfterCorrect"))
+                    {
+                        handleQuestions.start()
+                    }
+                    else
+                    {
+                        variable.enableButton = true
+                    }
                 }
                 else
                 {
@@ -93,7 +100,7 @@ Page {
             }
             else
             {
-                if(save.getBool("CorrectDisabled"))
+                if(save.getBool("WrongDisabled"))
                 {
                     variable.enableButton = true
                 }
@@ -199,7 +206,7 @@ Page {
         time: save.getInt("TimeCorrect") === 0 ? 2000: save.getInt("TimeCorrect")
         color: "green"
         text: "Correct"
-        onTriggered: handleQuestions.start()
+        onTriggered: save.getBool("NextAfterCorrect")? handleQuestions.start() : variable.enableButton = true
     }
 
     UpperPanel {

@@ -40,6 +40,7 @@ Dialog {
     }
 
     onAccepted: {
+        save.saveBool("NextAfterCorrect", autonext.checked)
         save.saveBool("CorrectDisabled", enabled1.checked)
         save.saveInt("TimeCorrect", time1.value)
         save.saveBool("WrongDisabled", enabled2.checked)
@@ -67,6 +68,14 @@ Dialog {
                 title: "Settings"
                 acceptText: "Save"
                 cancelText: "Discard"
+            }
+
+            TextSwitch {
+                id: autonext
+                width: parent.width
+                checked: save.getBool("NextAfterCorrect")
+                text: "Automatically get new questions after correct answer"
+                description: "If this option is checked, you will automatically get a new question after you answered the previous one correctly"
             }
 
             TextSwitch {
