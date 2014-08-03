@@ -201,10 +201,11 @@ Page {
             }
 
             Row {
-                x: parent.width/2 - target.width
+                x: parent.width/2 - (target.width + target2.width)/2
                 Label {
+                    id: target2
                     text: variable.valuecorrect
-                    font.pixelSize: Theme.fontSizeLarge
+                    font.pixelSize: Theme.fontSizeHuge
                 }
                 Image {
                     id: target

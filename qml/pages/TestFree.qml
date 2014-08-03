@@ -167,15 +167,16 @@ Page {
             }
 
             Row {
-                x: parent.width/2 - target.width
+                x: parent.width/2 - (target.width + target2.width)/2
                 Image {
                     id: target
                     source: variable.picture
                 }
                 Label {
+                    id: target2
                     visible: !variable.started
                     text: variable.valuecorrect
-                    font.pixelSize: Theme.fontSizeLarge
+                    font.pixelSize: Theme.fontSizeHuge
                 }
             }
 
