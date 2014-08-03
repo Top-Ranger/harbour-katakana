@@ -209,7 +209,7 @@ Page {
                 Label {
                     visible: !variable.started
                     text: variable.valuecorrect
-                    font.pixelSize: Theme.fontSizeHuge
+                    font.pixelSize: Theme.fontSizeLarge
                 }
             }
 

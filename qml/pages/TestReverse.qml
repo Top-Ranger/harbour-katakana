@@ -204,7 +204,7 @@ Page {
                 x: parent.width/2 - target.width
                 Label {
                     text: variable.valuecorrect
-                    font.pixelSize: Theme.fontSizeHuge
+                    font.pixelSize: Theme.fontSizeLarge
                 }
                 Image {
                     id: target
