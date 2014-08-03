@@ -645,7 +645,7 @@ Page {
                     testclass.add("ji", "Katakana/ji.png")
                 }
                 else {
-                    testclass.add("ji/zi", "Katakana/ji.png")
+                    testclass.add("ji (Z-Row)", "Katakana/ji.png")
                 }
             }
 
@@ -673,7 +673,7 @@ Page {
                     testclass.add("ji", "Katakana/di.png")
                 }
                 else {
-                    testclass.add("ji/di", "Katakana/di.png")
+                    testclass.add("ji (D-Row)", "Katakana/di.png")
                 }
             }
 
@@ -682,7 +682,7 @@ Page {
                     testclass.add("zu", "Katakana/du.png")
                 }
                 else {
-                    testclass.add("zu/du", "Katakana/du.png")
+                    testclass.add("zu (D-Row)", "Katakana/du.png")
                 }
             }
 
@@ -885,7 +885,7 @@ Page {
                     testclass.add("ja", "Katakana/dya.png")
                 }
                 else {
-                    testclass.add("ja(d)", "Katakana/dya.png")
+                    testclass.add("ja (D-Row)", "Katakana/dya.png")
                 }
             }
 
@@ -894,7 +894,7 @@ Page {
                     testclass.add("ju", "Katakana/dyu.png")
                 }
                 else {
-                    testclass.add("ju(d)", "Katakana/dyu.png")
+                    testclass.add("ju (D-Row)", "Katakana/dyu.png")
                 }
             }
 
@@ -903,7 +903,7 @@ Page {
                     testclass.add("jo", "Katakana/dyo.png")
                 }
                 else {
-                    testclass.add("jo(d)", "Katakana/dyo.png")
+                    testclass.add("jo (D-Row)", "Katakana/dyo.png")
                 }
             }
 
@@ -1833,9 +1833,17 @@ Page {
                     width: parent.width / 5
                     text: "     za"
                 }
-                Label{
+                Column {
                     width: parent.width / 5
-                    text: "     ji/zi"
+
+                    Label{
+                        text: "     ji"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: "     Z-Row"
+                    }
                 }
                 Label{
                     width: parent.width / 5
@@ -1892,13 +1900,29 @@ Page {
                     width: parent.width / 5
                     text: "     da"
                 }
-                Label{
+                Column {
                     width: parent.width / 5
-                    text: "     ji/di"
+
+                    Label{
+                        text: "     ji"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: "     D-Row"
+                    }
                 }
-                Label{
+                Column {
                     width: parent.width / 5
-                    text: "     zu/du"
+
+                    Label{
+                        text: "     zu"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: "     D-Row"
+                    }
                 }
                 Label{
                     width: parent.width / 5
@@ -2444,17 +2468,41 @@ Page {
                     checked: save.getBool("dyo")
                     onClicked: {save.saveBool("dyo",checked)}
                 }
-                Label{
-                    width: parent.width / 3
-                    text: "         ja(d)"
+                Column {
+                    width: parent.width / 5
+
+                    Label{
+                        text: "     ja"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: "     D-Row"
+                    }
                 }
-                Label{
-                    width: parent.width / 3
-                    text: "         ju(d)"
+                Column {
+                    width: parent.width / 5
+
+                    Label{
+                        text: "     ju"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: "     D-Row"
+                    }
                 }
-                Label{
-                    width: parent.width / 3
-                    text: "         jo(d)"
+                Column {
+                    width: parent.width / 5
+
+                    Label{
+                        text: "     jo"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: "     D-Row"
+                    }
                 }
 
 
