@@ -2472,36 +2472,36 @@ Page {
                     width: parent.width / 5
 
                     Label{
-                        text: "     ja"
+                        text: "         ja"
                     }
                     Label{
                         font.pixelSize: Theme.fontSizeTiny
                         color: Theme.secondaryColor
-                        text: "     D-Row"
+                        text: "         D-Row"
                     }
                 }
                 Column {
                     width: parent.width / 5
 
                     Label{
-                        text: "     ju"
+                        text: "         ju"
                     }
                     Label{
                         font.pixelSize: Theme.fontSizeTiny
                         color: Theme.secondaryColor
-                        text: "     D-Row"
+                        text: "         D-Row"
                     }
                 }
                 Column {
                     width: parent.width / 5
 
                     Label{
-                        text: "     jo"
+                        text: "         jo"
                     }
                     Label{
                         font.pixelSize: Theme.fontSizeTiny
                         color: Theme.secondaryColor
-                        text: "     D-Row"
+                        text: "         D-Row"
                     }
                 }
 
