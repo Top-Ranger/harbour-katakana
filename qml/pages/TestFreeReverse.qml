@@ -46,6 +46,9 @@ Page {
         property string valuecorrect: ""
         property int sumCorrect: save.getInt("FreeReversrTestCorrect")
         property int sumQuestions: save.getInt("FreeReverseTestQuestions")
+
+        property bool drawingComplete: false
+        property bool correctAnswer: false
     }
 
     Item {
@@ -60,6 +63,7 @@ Page {
                 testclass.newQuestion()
                 variable.picture = testclass.picture()
                 variable.valuecorrect = testclass.valuecorrect()
+                drawnImage.clear()
             }
 
         }
@@ -67,17 +71,15 @@ Page {
         function end(){
             variable.questions++
             variable.sumQuestions++
-            var correct = false
-            if(testclass.sameString(variable.valuecorrect, input.text))
+            if(variable.correctAnswer)
             {
                 variable.correct++
                 variable.sumCorrect++
-                correct = true
             }
             save.saveInt("FreeReverseTestQuestions",variable.sumQuestions)
             save.saveInt("FreeReversrTestCorrect",variable.sumCorrect)
             variable.started = false
-            if(correct)
+            if(variable.correctAnswer)
             {
                 if(save.getBool("CorrectDisabled"))
                 {
@@ -234,7 +236,7 @@ Page {
                             width: parent.width
                             anchors.centerIn: parent
 
-                            enabled: variable.started
+                            enabled: variable.started && !variable.drawingComplete
 
                             onPressed: {test.backNavigation = false; test.canNavigateForward = false; flickable.interactive = false; hoverEnabled = true; drawnImage.positionX = mouseX; drawnImage.positionY = mouseY}
                             onReleased: {test.backNavigation = true; test.canNavigateForward = true; flickable.interactive = true; hoverEnabled = false}
@@ -246,12 +248,64 @@ Page {
                 }
             }
 
-            Button {
+            Row {
                 width: parent.width
-                enabled: variable.started
-                text: "Clear"
-                onClicked: {
-                    drawnImage.clear()
+
+                Button {
+                    width: parent.width/2
+                    enabled: variable.started && !variable.drawingComplete
+                    text: "Clear"
+                    onClicked: {
+                        drawnImage.clear()
+                    }
+                }
+
+                Button {
+                    width: parent.width/2
+                    enabled: variable.started && !variable.drawingComplete
+                    text: "Finished"
+                    onClicked: {
+                        variable.drawingComplete = true
+                    }
+                }
+            }
+
+            Image {
+                height: target.height/2
+                width: target.width/2
+                x: parent.width/2 - width/2
+                source: variable.drawingComplete?variable.picture:"Katakana/empty.png"
+            }
+
+            Label {
+                x: parent.width/2 - width/2
+                font.pixelSize: Theme.fontSizeExtraSmall
+                text: "Is it the same?"
+            }
+
+            Row {
+                width: parent.width
+
+                Button {
+                    width: parent.width/2
+                    enabled: variable.started && variable.drawingComplete
+                    text: "Yes"
+                    onClicked: {
+                        variable.drawingComplete = false
+                        variable.correctAnswer = true
+                        handleQuestions.end()
+                    }
+                }
+
+                Button {
+                    width: parent.width/2
+                    enabled: variable.started && variable.drawingComplete
+                    text: "No"
+                    onClicked: {
+                        variable.drawingComplete = false
+                        variable.correctAnswer = false
+                        handleQuestions.end()
+                    }
                 }
             }
 
