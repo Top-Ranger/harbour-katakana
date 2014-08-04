@@ -2477,7 +2477,7 @@ Page {
                     Label{
                         font.pixelSize: Theme.fontSizeTiny
                         color: Theme.secondaryColor
-                        text: "         D-Row"
+                        text: "            D-Row"
                     }
                 }
                 Column {
@@ -2489,7 +2489,7 @@ Page {
                     Label{
                         font.pixelSize: Theme.fontSizeTiny
                         color: Theme.secondaryColor
-                        text: "         D-Row"
+                        text: "            D-Row"
                     }
                 }
                 Column {
@@ -2501,7 +2501,7 @@ Page {
                     Label{
                         font.pixelSize: Theme.fontSizeTiny
                         color: Theme.secondaryColor
-                        text: "         D-Row"
+                        text: "            D-Row"
                     }
                 }
 
