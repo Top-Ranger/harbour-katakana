@@ -271,10 +271,16 @@ Page {
             }
 
             Image {
-                height: target.height/2
-                width: target.width/2
+                height: dummyImage.height/2
+                width: dummyImage.width/2
                 x: parent.width/2 - width/2
                 source: variable.drawingComplete?variable.picture:"Katakana/empty.png"
+            }
+
+            Image {
+                id: dummyImage
+                visible: false
+                source: variable.picture
             }
 
             Label {
