@@ -139,7 +139,8 @@ OTHER_FILES += qml/harbour-katakana.qml \
     harbour-katakana.png \
     qml/cover/cover.png \
     qml/pages/UpperPanel.qml \
-    qml/pages/Settings.qml
+    qml/pages/Settings.qml \
+    qml/pages/TestFreeReverse.qml
 
 HEADERS += \
     src/listelement.h \

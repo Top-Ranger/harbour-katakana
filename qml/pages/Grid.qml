@@ -42,6 +42,7 @@ Page {
           * 0 = normal test
           * 1 = reverse test
           * 2 = free test
+          * 3 = free reverse test
           */
         property int modus: 0
 
@@ -950,9 +951,13 @@ Page {
                 {
                     pageStack.push(Qt.resolvedUrl("TestReverse.qml"))
                 }
-                else
+                else if (modus == 2)
                 {
                     pageStack.push(Qt.resolvedUrl("TestFree.qml"))
+                }
+                else
+                {
+                    pageStack.push(Qt.resolvedUrl("TestFreeReverse.qml"))
                 }
             }
             else
@@ -1033,6 +1038,7 @@ Page {
                     MenuItem { text: "Normal Test" }
                     MenuItem { text: "Reverse Test" }
                     MenuItem { text: "Free Test"}
+                    MenuItem { text: "Free Reverse Test"}
                 }
             }
 
