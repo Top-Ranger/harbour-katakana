@@ -212,7 +212,7 @@ Page {
                         antialiasing: true
 
                         onPaint: {
-                            if(!clearDrawing)
+                            if(!clearDrawing && mouseArea.containsMouse)
                             {
                                 var context = getContext('2d')
                                 context.lineJoin = "round"
@@ -239,9 +239,7 @@ Page {
                             onPressed: {test.backNavigation = false; test.canNavigateForward = false; flickable.interactive = false; hoverEnabled = true; drawnImage.positionX = mouseX; drawnImage.positionY = mouseY}
                             onReleased: {test.backNavigation = true; test.canNavigateForward = true; flickable.interactive = true; hoverEnabled = false}
                             onPositionChanged: {
-                                if(containsMouse) {
-                                    drawnImage.requestPaint()
-                                }
+                                drawnImage.requestPaint()
                             }
                         }
                     }
