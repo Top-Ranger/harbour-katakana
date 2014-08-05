@@ -189,7 +189,7 @@ Page {
                     width: parent.width - 10
                     height: parent.height - 10
                     anchors.centerIn: parent
-                    color: "black"
+                    color: (variable.started && !variable.drawingComplete)?"black":"#3A3A3A"
 
                     Canvas {
 
@@ -286,6 +286,7 @@ Page {
             Label {
                 x: parent.width/2 - width/2
                 font.pixelSize: Theme.fontSizeExtraSmall
+                color: (variable.started && variable.drawingComplete)?Theme.primaryColor:Theme.secondaryColor
                 text: "Is it the same?"
             }
 
