@@ -15,6 +15,11 @@ SOURCES += src/harbour-katakana.cpp \
     src/testclass.cpp \
     src/persistenceclass.cpp
 
+license.files = LICENSE.txt
+license.path = /usr/share/$${TARGET}
+
+INSTALLS += license
+
 OTHER_FILES += qml/harbour-katakana.qml \
     qml/cover/CoverPage.qml \
     rpm/harbour-katakana.spec \
