@@ -219,7 +219,7 @@ Page {
                                 var context = getContext('2d')
                                 context.lineJoin = "round"
                                 context.linecap = "round"
-                                context.lineWidth = 2
+                                context.lineWidth = 5
                                 context.strokeStyle = "lightgrey"
                                 context.beginPath()
                                 context.moveTo(positionX, positionY)
