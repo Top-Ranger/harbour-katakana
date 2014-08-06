@@ -183,7 +183,7 @@ Page {
                 width: Screen.width*2/3
                 height: width
                 x: (parent.width/2) - (width/2)
-                color: "white"
+                color: "lightgrey"
 
                 Rectangle {
                     width: parent.width - 10
@@ -220,7 +220,7 @@ Page {
                                 context.lineJoin = "round"
                                 context.linecap = "round"
                                 context.lineWidth = 2
-                                context.strokeStyle = "white"
+                                context.strokeStyle = "lightgrey"
                                 context.beginPath()
                                 context.moveTo(positionX, positionY)
                                 context.lineTo(mouseArea.mouseX, mouseArea.mouseY)
