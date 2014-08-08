@@ -183,7 +183,7 @@ Page {
                 width: Screen.width*2/3
                 height: width
                 x: (parent.width/2) - (width/2)
-                color: "lightgrey"
+                color: (variable.started && !variable.drawingComplete)?Theme.highlightColor:Theme.secondaryHighlightColor
 
                 Rectangle {
                     width: parent.width - 10
