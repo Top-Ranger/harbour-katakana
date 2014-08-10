@@ -270,28 +270,39 @@ Page {
                 }
             }
 
-            Image {
-                height: dummyImage.height/2
-                width: dummyImage.width/2
-                x: parent.width/2 - width/2
-                source: variable.drawingComplete?variable.picture:"Katakana/empty.png"
-            }
-
-            Image {
-                id: dummyImage
-                visible: false
-                source: variable.picture
+            Separator {
+                width: parent.width
+                color: Theme.secondaryColor
             }
 
             Label {
                 x: parent.width/2 - width/2
-                font.pixelSize: Theme.fontSizeExtraSmall
                 color: (variable.started && variable.drawingComplete)?Theme.primaryColor:Theme.secondaryColor
                 text: "Is it the same?"
             }
 
+            Image {
+                x: parent.width/2 - width/2
+                source: variable.drawingComplete?variable.picture:"Katakana/empty.png"
+            }
+
+            Separator {
+                width: parent.width
+                color: Theme.secondaryColor
+            }
+
+            Button {
+                id: newQuestion
+                width: parent.width
+                enabled: variable.enableButton
+                visible: !(variable.started && variable.drawingComplete)
+                text: variable.first?"Start":"Continue"
+                onClicked: handleQuestions.start()
+            }
+
             Row {
                 width: parent.width
+                visible: variable.started && variable.drawingComplete
 
                 Button {
                     width: parent.width/2
@@ -314,19 +325,6 @@ Page {
                         handleQuestions.end()
                     }
                 }
-            }
-
-            Separator {
-                width: parent.width
-                color: Theme.secondaryColor
-            }
-
-            Button {
-                id: newQuestion
-                width: parent.width
-                enabled: variable.enableButton
-                text: variable.first?"Start":"Continue"
-                onClicked: handleQuestions.start()
             }
         }
     }
