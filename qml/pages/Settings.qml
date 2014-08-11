@@ -35,6 +35,10 @@ Dialog {
 
     id: settings
 
+    acceptDestinationAction: PageStackAction.Replace
+    acceptDestinationReplaceTarget: null
+    acceptDestination: Qt.resolvedUrl("Grid.qml")
+
     RemorsePopup {
         id: remorsePopup
     }
@@ -45,6 +49,7 @@ Dialog {
         save.saveInt("TimeCorrect", time1.value)
         save.saveBool("WrongDisabled", enabled2.checked)
         save.saveInt("TimeWrong", time2.value)
+        save.saveBool("UseKunrei", kunrei.checked)
     }
 
     SilicaFlickable {
@@ -68,6 +73,14 @@ Dialog {
                 title: "Settings"
                 acceptText: "Save"
                 cancelText: "Discard"
+            }
+
+            TextSwitch {
+                id: kunrei
+                width: parent.width
+                checked: save.getBool("UseKunrei")
+                text: "Use Kunrei for transcription"
+                description: "If this option is checked, 'Kunrei-shiki romanization' will be used for transcripting Katakana rather than 'Hepburn romanization'"
             }
 
             TextSwitch {
