@@ -35,10 +35,6 @@ Dialog {
 
     id: settings
 
-    acceptDestinationAction: PageStackAction.Replace
-    acceptDestinationReplaceTarget: null
-    acceptDestination: Qt.resolvedUrl("Grid.qml")
-
     RemorsePopup {
         id: remorsePopup
     }
@@ -50,6 +46,10 @@ Dialog {
         save.saveBool("WrongDisabled", enabled2.checked)
         save.saveInt("TimeWrong", time2.value)
         save.saveBool("UseKunrei", kunrei.checked)
+        while(pageStack.busy)
+        {
+        }
+        pageStack.replaceAbove(null, Qt.resolvedUrl("Grid.qml"))
     }
 
     SilicaFlickable {
