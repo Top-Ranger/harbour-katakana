@@ -599,7 +599,7 @@ Page {
                     testclass.add(save.getBool("UseKunrei")?"i":"wi", "Katakana/wi.png")
                 }
                 else {
-                    testclass.add(save.getBool("UseKunrei")?"i":"wi (W-Row)", "Katakana/wi.png")
+                    testclass.add(save.getBool("UseKunrei")?"i (W-Row)":"wi", "Katakana/wi.png")
                 }
             }
 
@@ -608,7 +608,7 @@ Page {
                     testclass.add(save.getBool("UseKunrei")?"e":"we", "Katakana/we.png")
                 }
                 else {
-                    testclass.add(save.getBool("UseKunrei")?"e":"we (W-Row)", "Katakana/we.png")
+                    testclass.add(save.getBool("UseKunrei")?"e (W-Row)":"we", "Katakana/we.png")
                 }
             }
 
@@ -617,7 +617,7 @@ Page {
                     testclass.add(save.getBool("UseKunrei")?"o":"wo", "Katakana/wo.png")
                 }
                 else {
-                    testclass.add(save.getBool("UseKunrei")?"o":"wo (W-Row)", "Katakana/wo.png")
+                    testclass.add(save.getBool("UseKunrei")?"o (W-Row)":"wo", "Katakana/wo.png")
                 }
             }
 
