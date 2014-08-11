@@ -595,15 +595,30 @@ Page {
             }
 
             if (wi.checked) {
-                testclass.add("wi", "Katakana/wi.png")
+                if(modus === 2) { // In free mode we only want to type in the transcription
+                    testclass.add(save.getBool("UseKunrei")?"i":"wi", "Katakana/wi.png")
+                }
+                else {
+                    testclass.add(save.getBool("UseKunrei")?"i":"wi (W-Row)", "Katakana/wi.png")
+                }
             }
 
             if (we.checked) {
-                testclass.add("we", "Katakana/we.png")
+                if(modus === 2) { // In free mode we only want to type in the transcription
+                    testclass.add(save.getBool("UseKunrei")?"e":"we", "Katakana/we.png")
+                }
+                else {
+                    testclass.add(save.getBool("UseKunrei")?"e":"we (W-Row)", "Katakana/we.png")
+                }
             }
 
             if (wo.checked) {
-                testclass.add("wo", "Katakana/wo.png")
+                if(modus === 2) { // In free mode we only want to type in the transcription
+                    testclass.add(save.getBool("UseKunrei")?"o":"wo", "Katakana/wo.png")
+                }
+                else {
+                    testclass.add(save.getBool("UseKunrei")?"o":"wo (W-Row)", "Katakana/wo.png")
+                }
             }
 
             if (n.checked) {
@@ -1645,21 +1660,45 @@ Page {
                     width: parent.width / 5
                     text: "     wa"
                 }
-                Label{
+                Column {
                     width: parent.width / 5
-                    text: "     wi"
+
+                    Label{
+                        text: save.getBool("UseKunrei")?"     i":"     wi"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: save.getBool("UseKunrei")?"     W-Row":"     "
+                    }
                 }
                 Label{
                     width: parent.width / 5
                     text: "      "
                 }
-                Label{
+                Column {
                     width: parent.width / 5
-                    text: "     we"
+
+                    Label{
+                        text: save.getBool("UseKunrei")?"     e":"     we"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: save.getBool("UseKunrei")?"     W-Row":"     "
+                    }
                 }
-                Label{
+                Column {
                     width: parent.width / 5
-                    text: "     wo"
+
+                    Label{
+                        text: save.getBool("UseKunrei")?"     o":"     wo"
+                    }
+                    Label{
+                        font.pixelSize: Theme.fontSizeTiny
+                        color: Theme.secondaryColor
+                        text: save.getBool("UseKunrei")?"     W-Row":"     "
+                    }
                 }
 
                 // "n"
