@@ -62,6 +62,7 @@ Page {
                 variable.valuecorrect = testclass.valuecorrect()
                 input.placeholderText = "answer"
                 input.text = ""
+                input.forceActiveFocus()
             }
 
         }
