@@ -52,7 +52,7 @@ Page {
         id: handleQuestions
 
         function start(){
-            if(!variable.started)
+            if(!variable.started || (save.getBool("CorrectDisabled") && save.getBool("NextAfterCorrect")))
             {
                 variable.started = true
                 variable.enableButton = false
@@ -80,7 +80,6 @@ Page {
             }
             save.saveInt("FreeTestQuestions",variable.sumQuestions)
             save.saveInt("FreeTestCorrect",variable.sumCorrect)
-            variable.started = false
             if(correct)
             {
                 if(save.getBool("CorrectDisabled"))
@@ -91,11 +90,13 @@ Page {
                     }
                     else
                     {
+                        variable.started = false
                         variable.enableButton = true
                     }
                 }
                 else
                 {
+                    variable.started = false
                     correctPanel.show()
                 }
             }
@@ -103,10 +104,12 @@ Page {
             {
                 if(save.getBool("WrongDisabled"))
                 {
+                    variable.started = false
                     variable.enableButton = true
                 }
                 else
                 {
+                    variable.started = false
                     falsePanel.show()
                 }
             }
