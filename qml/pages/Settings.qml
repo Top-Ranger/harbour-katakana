@@ -73,6 +73,7 @@ Dialog {
                 title: "Settings"
                 acceptText: "Save"
                 cancelText: "Discard"
+                width: settings.width
             }
 
             TextSwitch {
