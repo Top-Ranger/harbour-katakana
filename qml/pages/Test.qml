@@ -221,6 +221,7 @@ Page {
                     id: one
                     enabled: variable.started
                     text: variable.valueone
+                    width:  mainColumn.width / 2
                     onClicked: handleQuestions.onePressed()
                 }
 
@@ -228,6 +229,7 @@ Page {
                     id: two
                     enabled: variable.started
                     text: variable.valuetwo
+                    width:  mainColumn.width / 2
                     onClicked: handleQuestions.twoPressed()
                 }
 
@@ -235,6 +237,7 @@ Page {
                     id: three
                     enabled: variable.started
                     text: variable.valuethree
+                    width:  mainColumn.width / 2
                     onClicked: handleQuestions.threePressed()
                 }
 
@@ -242,6 +245,7 @@ Page {
                     id: four
                     enabled: variable.started
                     text: variable.valuefour
+                    width:  mainColumn.width / 2
                     onClicked: handleQuestions.fourPressed()
                 }
 
@@ -249,6 +253,7 @@ Page {
                     id: five
                     enabled: variable.started
                     text: variable.valuefive
+                    width:  mainColumn.width / 2
                     onClicked: handleQuestions.fivePressed()
                 }
 
@@ -257,6 +262,7 @@ Page {
                     id: six
                     enabled: variable.started
                     text: variable.valuesix
+                    width:  mainColumn.width / 2
                     onClicked: handleQuestions.sixPressed()
                 }
             }
