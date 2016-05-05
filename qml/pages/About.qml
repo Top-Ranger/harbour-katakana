@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014 Marcus Soll
+  Copyright (C) 2014,2016 Marcus Soll
   All rights reserved.
 
   You may use this file under the terms of BSD license as follows:
@@ -60,7 +60,7 @@ Page {
             }
 
             Label {
-                text: "Katakana Version 2.4"
+                text: "Katakana Version 2.5"
             }
 
             Text  {
@@ -78,7 +78,7 @@ Page {
                 font.pixelSize: Theme.fontSizeExtraSmall
                 wrapMode: Text.Wrap
 
-                text: "Copyright (C) 2014 Marcus Soll
+                text: "Copyright (C) 2014,2016 Marcus Soll
 Copyright (C) 2013 Jolla Ltd.
 All rights reserved.
 

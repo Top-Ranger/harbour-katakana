@@ -1,6 +1,6 @@
 Name: harbour-katakana
 Summary: Katakana Trainer
-Version: 2.4
+Version: 2.5
 Release: 1
 Group: Qt/Qt
 URL: https://github.com/Top-Ranger/harbour-katakana
@@ -19,13 +19,8 @@ PkgConfigBR:
 Requires:
 - sailfishsilica-qt5 >= 0.10.9
 Files:
-- /usr/share/harbour-katakana
-- /usr/share/icons/hicolor/86x86/apps
-- /usr/share/applications
-- /usr/share/harbour-katakana
-- /usr/bin
 - '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
 - '%{_datadir}/applications/%{name}.desktop'
-- '%{_datadir}/%{name}/qml'
+- '%{_datadir}/%{name}'
 - '%{_bindir}'
 PkgBR: []

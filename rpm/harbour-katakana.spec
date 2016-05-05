@@ -13,7 +13,7 @@ Name:       harbour-katakana
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Katakana Trainer
-Version:    2.4
+Version:    2.5
 Release:    1
 Group:      Qt/Qt
 License:    modified BSD
@@ -62,14 +62,9 @@ desktop-file-install --delete-original       \
 
 %files
 %defattr(-,root,root,-)
-/usr/share/harbour-katakana
-/usr/share/icons/hicolor/86x86/apps
-/usr/share/applications
-/usr/share/harbour-katakana
-/usr/bin
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}/qml
+%{_datadir}/%{name}
 %{_bindir}
 # >> files
 # << files
