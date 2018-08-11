@@ -208,8 +208,7 @@ Page {
                 }
                 Label {
                     id: target2
-                    visible: !variable.started
-                    text: variable.valuecorrect
+                    text: variable.started ? "" : variable.valuecorrect
                     font.pixelSize: Theme.fontSizeHuge
                 }
             }
