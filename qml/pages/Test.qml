@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2014,2016 Marcus Soll
+  Copyright (C) 2014,2016,2018 Marcus Soll
   Copyright (C) 2013 Jolla Ltd.
   All rights reserved.
 
